@@ -2,6 +2,21 @@ import { withStyles } from "@mui/styles";
 import clsx from "clsx";
 import Carousel from "../Carousel";
 
+const ProjectsWrapper = withStyles(() => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100vw",
+    height: "100vh",
+  },
+}))(({ classes, children, id }) => (
+  <div className={classes.root} id={id}>
+    {children}
+  </div>
+));
+
 const Projects = withStyles(() => ({
   root: {
     display: "flex",
@@ -18,9 +33,11 @@ const Projects = withStyles(() => ({
   },
 }))(({ classes }) => {
   return (
-    <div id="projects" className={clsx(classes.root)}>
-      <Carousel />
-    </div>
+    <ProjectsWrapper id="projects">
+      <div className={clsx(classes.root)}>
+        <Carousel />
+      </div>
+    </ProjectsWrapper>
   );
 });
 export default Projects;

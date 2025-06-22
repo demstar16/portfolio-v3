@@ -10,9 +10,16 @@ const theme = createTheme({
     secondary: {
       main: "#dff297",
     },
+    background: {
+      default: "#143D60",
+    },
+    text: {
+      primary: "#dff297",
+    },
   },
   typography: {
     fontFamily: "Rokkitt",
+    fontSize: 14,
   },
 });
 
