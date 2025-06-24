@@ -5,7 +5,6 @@ import { useState } from "react";
 import Header from "../Header";
 
 const j1Msg = `I am currently employed with JourneyOne having completed their graduate program. I received direct mentorship learning software best practices, particularly in the world of JavaScript and TypeScript, although we did go as far as learning Scheme in the SICP textbook. I also got the opportunity to work on one of their products, Jibility. Here I learnt lots about functional programming and working with a team. I am currently diving into the M365 space with my new work project.`;
-const cewaMsg = `Worked on both web and desktop solutions for the family business—because who says nepotism can’t be productive? Built a static website and developed a machine selection tool using Electron.js, making complex calculations a breeze for customers.`;
 const genesMsg = `This internship was a big wake-up call, throwing me into the deep end of real-world software development. I worked with Rust and Python, contributed to building software solutions, and learned that picking the right library is an art—one that can make or break your sanity.`;
 
 const WorkExperience = withStyles((theme) => ({
@@ -76,11 +75,11 @@ const WorkExperience = withStyles((theme) => ({
               activeIndex === 2 ? classes.active : {}
             )}
             onClick={() => {
-              setExperience(cewaMsg);
+              setExperience(genesMsg);
               setActiveIndex(2);
             }}
           >
-            Cleaning Equipment WA
+            GeneS
           </button>
           <button
             className={clsx(
@@ -88,11 +87,11 @@ const WorkExperience = withStyles((theme) => ({
               activeIndex === 3 ? classes.active : {}
             )}
             onClick={() => {
-              setExperience(genesMsg);
+              setExperience();
               setActiveIndex(3);
             }}
           >
-            GeneS
+            Jibility
           </button>
           <button
             className={clsx(
@@ -102,18 +101,6 @@ const WorkExperience = withStyles((theme) => ({
             onClick={() => {
               setExperience();
               setActiveIndex(4);
-            }}
-          >
-            Jibility
-          </button>
-          <button
-            className={clsx(
-              classes.button,
-              activeIndex === 5 ? classes.active : {}
-            )}
-            onClick={() => {
-              setExperience();
-              setActiveIndex(5);
             }}
           >
             Sandfire

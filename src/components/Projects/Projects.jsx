@@ -1,6 +1,6 @@
 import { withStyles } from "@mui/styles";
 import clsx from "clsx";
-import Carousel from "../Carousel";
+import ProjectBox from "../ProjectBox";
 
 const ProjectsWrapper = withStyles(() => ({
   root: {
@@ -35,7 +35,7 @@ const Projects = withStyles(() => ({
   return (
     <ProjectsWrapper id="projects">
       <div className={clsx(classes.root)}>
-        <Carousel />
+        <ProjectBox />
       </div>
     </ProjectsWrapper>
   );

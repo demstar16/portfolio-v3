@@ -138,17 +138,20 @@ const Skills = withStyles((theme) => ({
         <Skill imgSrc="src/images/vitest.png" header="Vitest" />
         <Skill imgSrc="src/images/socket-io.png" header="Socket.IO" />
         <Skill imgSrc="src/images/mui.png" header="MUI" />
+        <Skill imgSrc="src/images/ramda.svg" header="Ramda" />
       </div>
       <div
         id="tools"
         className={activeIndex === 3 ? classes.skills : classes.hide}
       >
+        <Skill imgSrc="src/images/docker.webp" header="Docker" />
         <Skill imgSrc="src/images/node.png" header="Node.js" />
         <Skill imgSrc="src/images/storybook.png" header="Storybook" />
         <Skill imgSrc="src/images/jira.svg" header="Jira" />
         <Skill imgSrc="src/images/postman.svg" header="Postman" />
         <Skill imgSrc="src/images/vite.png" header="Vite" />
         <Skill imgSrc="src/images/yarn.png" header="Yarn" />
+        <Skill imgSrc="src/images/sqlite.png" header="SQLite" />
         <Skill imgSrc="src/images/npm.png" header="NPM" />
         <Skill imgSrc="src/images/eslint.png" header="ESLint" />
         <Skill imgSrc="src/images/prettier.png" header="Prettier" />
@@ -163,6 +166,10 @@ const Skills = withStyles((theme) => ({
       >
         <Skill imgSrc="src/images/tdd.Default" header="TDD" />
         <Skill imgSrc="src/images/oop.png" header="OOP" />
+        <Skill
+          imgSrc="src/images/cloud-computing.png"
+          header="Cloud Computing"
+        />
         <Skill imgSrc="src/images/clean-code.jpg" header="Clean Code" />
         <Skill imgSrc="src/images/ddd.jpg" header="Domain Driven Design" />
         <Skill imgSrc="src/images/clean-arch.jpg" header="Clean Architecture" />

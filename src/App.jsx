@@ -19,6 +19,8 @@ const Wrapper = withStyles((theme) => ({
       theme.palette.secondary.main,
       0.3
     )} 1px, transparent 1px)`,
+    overflow: "hidden",
+    overflowY: "hidden",
   },
 }))(({ classes, children }) => <div className={classes.root}>{children}</div>);
 
