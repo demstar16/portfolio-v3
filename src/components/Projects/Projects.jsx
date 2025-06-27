@@ -20,22 +20,13 @@ const ProjectsWrapper = withStyles(() => ({
 const Projects = withStyles(() => ({
   root: {
     display: "flex",
-    flexDirection: "column",
-    paddingTop: "100px",
-    height: "100vh",
-    gap: "1rem",
-    overflow: "hidden",
   },
-  projects: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "2rem",
-  },
+  projects: {},
 }))(({ classes }) => {
   return (
     <ProjectsWrapper id="projects">
       <div className={clsx(classes.root)}>
-        <ProjectBox />
+        <ProjectBox header="Triumph" />
       </div>
     </ProjectsWrapper>
   );
