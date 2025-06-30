@@ -21,7 +21,7 @@ const projectData = [
       "storybook.png",
       "aws.png",
     ],
-    imgSrc: "src/images/connect4-game.png",
+    imgSrc: "static/images/connect4-game.png",
     repository: "https://github.com/dempseyt/connect4",
     demo: "http://dempsey-connect-4-bucket.s3-website-ap-southeast-2.amazonaws.com/",
   },
@@ -32,7 +32,7 @@ const projectData = [
     shortDescription:
       "Triumph is a CLI political wargame built with Python, and Bayesian modelling, where players shape public opinion through strategic dialogue as either the Government or the Resistance.",
     techStack: ["python.webp"],
-    imgSrc: "src/images/triumph.png",
+    imgSrc: "static/images/triumph.png",
     repository: "https://github.com/demstar16/triumph",
     demo: "",
   },
@@ -43,7 +43,7 @@ const projectData = [
     shortDescription:
       "A wordle clone created with Flask where you have to guess which movie an Adam Sandler movie audio clip is from.",
     techStack: ["python.webp", "flask.webp", "js.png"],
-    imgSrc: "src/images/adam-sandler.png",
+    imgSrc: "static/images/adam-sandler.png",
     repository: "https://github.com/demstar16/adam-sandler-audio-wordle",
     demo: "",
   },
@@ -54,7 +54,7 @@ const projectData = [
     shortDescription:
       "CLI tool to kickstart projects, avoiding initial set up and config hassles.",
     techStack: ["js.png"],
-    imgSrc: "src/images/template-cli.png",
+    imgSrc: "static/images/template-cli.png",
     repository: "https://github.com/dempseyt/template-cli",
     demo: "",
   },

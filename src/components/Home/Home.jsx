@@ -61,7 +61,7 @@ const Home = withStyles((theme) => ({
             {`Outside of the software world, I have a big passion for rugby (I play it myself), love getting down to the beach for a surf, keeping up to date with my favorite TV shows, and I am currently learning guitar.`}
           </Subtitle>
         </div>
-        <img src="src/images/ai-portrait.png" className={classes.image} />
+        <img src="static/images/ai-portrait.png" className={classes.image} />
       </div>
     </HomeWrapper>
   );

@@ -75,7 +75,7 @@ const ProjectModal = withStyles((theme) => ({
         <p>{project.description}</p>
         <div className={classes.techStack}>
           {project.techStack.map((imgFile) => (
-            <img src={"src/images/" + imgFile} className={classes.icon} />
+            <img src={"static/images/" + imgFile} className={classes.icon} />
           ))}
         </div>
         <div className={classes.buttons}>
@@ -86,7 +86,7 @@ const ProjectModal = withStyles((theme) => ({
               <button className={clsx(classes.button, classes.codeButton)}>
                 Code{" "}
                 <img
-                  src="src/images/github.svg"
+                  src="static/images/github.svg"
                   className={classes.githubIcon}
                 />
               </button>

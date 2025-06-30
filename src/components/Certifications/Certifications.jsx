@@ -25,8 +25,8 @@ const Certifications = withStyles((theme) => ({
   <div className={classes.root}>
     <Header>Certifications</Header>
     <div className={classes.badgeWrapper}>
-      <img className={classes.image} src="src/images/az900-badge.png" />
-      <img className={classes.image} src="src/images/ccp-badge.png" />
+      <img className={classes.image} src="static/images/az900-badge.png" />
+      <img className={classes.image} src="static/images/ccp-badge.png" />
     </div>
   </div>
 ));

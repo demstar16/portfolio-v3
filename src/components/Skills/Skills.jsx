@@ -11,31 +11,31 @@ const skillsData = [
     skills: [
       {
         header: "Bash",
-        imgSrc: "src/images/bash.png",
+        imgSrc: "static/images/bash.png",
       },
       {
         header: "JavaScript",
-        imgSrc: "src/images/js.png",
+        imgSrc: "static/images/js.png",
       },
       {
         header: "TypeScript",
-        imgSrc: "src/images/ts.png",
+        imgSrc: "static/images/ts.png",
       },
       {
         header: "Python",
-        imgSrc: "src/images/python.webp",
+        imgSrc: "static/images/python.webp",
       },
       {
         header: "Java",
-        imgSrc: "src/images/java.png",
+        imgSrc: "static/images/java.png",
       },
       {
         header: "Lisp",
-        imgSrc: "src/images/lisp.png",
+        imgSrc: "static/images/lisp.png",
       },
       {
         header: "Lua",
-        imgSrc: "src/images/lua.png",
+        imgSrc: "static/images/lua.png",
       },
     ],
   },
@@ -44,44 +44,44 @@ const skillsData = [
     skills: [
       {
         header: "React",
-        imgSrc: "src/images/react.png",
+        imgSrc: "static/images/react.png",
       },
       {
         header: "Redux",
-        imgSrc: "src/images/redux.png",
+        imgSrc: "static/images/redux.png",
       },
-      { header: "Next JS", imgSrc: "src/images/nextjs.svg" },
+      { header: "Next JS", imgSrc: "static/images/nextjs.svg" },
       {
         header: "Flask",
-        imgSrc: "src/images/flask.webp",
+        imgSrc: "static/images/flask.webp",
       },
       {
         header: "Tailwind",
-        imgSrc: "src/images/tailwind.png",
+        imgSrc: "static/images/tailwind.png",
       },
       {
         header: "Styled Components",
-        imgSrc: "src/images/styled-components.png",
+        imgSrc: "static/images/styled-components.png",
       },
       {
         header: "Jest",
-        imgSrc: "src/images/jest.png",
+        imgSrc: "static/images/jest.png",
       },
       {
         header: "Vitest",
-        imgSrc: "src/images/vitest.png",
+        imgSrc: "static/images/vitest.png",
       },
       {
         header: "Socket.IO",
-        imgSrc: "src/images/socket-io.png",
+        imgSrc: "static/images/socket-io.png",
       },
       {
         header: "MUI",
-        imgSrc: "src/images/mui.png",
+        imgSrc: "static/images/mui.png",
       },
       {
         header: "Ramda",
-        imgSrc: "src/images/ramda.svg",
+        imgSrc: "static/images/ramda.svg",
       },
     ],
   },
@@ -90,64 +90,64 @@ const skillsData = [
     skills: [
       {
         header: "Docker",
-        imgSrc: "src/images/docker.webp",
+        imgSrc: "static/images/docker.webp",
       },
       {
         header: "Node.JS",
-        imgSrc: "src/images/node.png",
+        imgSrc: "static/images/node.png",
       },
       {
         header: "AWS",
-        imgSrc: "src/images/aws.png",
+        imgSrc: "static/images/aws.png",
       },
       {
         header: "Azure",
-        imgSrc: "src/images/azure.webp",
+        imgSrc: "static/images/azure.webp",
       },
       {
         header: "Storybook",
-        imgSrc: "src/images/storybook.png",
+        imgSrc: "static/images/storybook.png",
       },
-      { header: "Turbo", imgSrc: "src/images/turbo.png" },
+      { header: "Turbo", imgSrc: "static/images/turbo.png" },
       {
         header: "Jira",
-        imgSrc: "src/images/jira.svg",
+        imgSrc: "static/images/jira.svg",
       },
       {
         header: "Postman",
-        imgSrc: "src/images/postman.svg",
+        imgSrc: "static/images/postman.svg",
       },
       {
         header: "Vite",
-        imgSrc: "src/images/vite.png",
+        imgSrc: "static/images/vite.png",
       },
       {
         header: "Yarn",
-        imgSrc: "src/images/yarn.png",
+        imgSrc: "static/images/yarn.png",
       },
       {
         header: "SQLite",
-        imgSrc: "src/images/sqlite.png",
+        imgSrc: "static/images/sqlite.png",
       },
       {
         header: "NPM",
-        imgSrc: "src/images/npm.png",
+        imgSrc: "static/images/npm.png",
       },
       {
         header: "ESLint",
-        imgSrc: "src/images/eslint.png",
+        imgSrc: "static/images/eslint.png",
       },
       {
         header: "Prettier",
-        imgSrc: "src/images/prettier.png",
+        imgSrc: "static/images/prettier.png",
       },
       {
         header: "Vim",
-        imgSrc: "src/images/vim.png",
+        imgSrc: "static/images/vim.png",
       },
       {
         header: "tmux",
-        imgSrc: "src/images/tmux.svg",
+        imgSrc: "static/images/tmux.svg",
       },
     ],
   },
@@ -156,35 +156,35 @@ const skillsData = [
     skills: [
       {
         header: "TDD",
-        imgSrc: "src/images/tdd.Default",
+        imgSrc: "static/images/tdd.Default",
       },
       {
         header: "OOP",
-        imgSrc: "src/images/oop.png",
+        imgSrc: "static/images/oop.png",
       },
       {
         header: "Cloud Computing",
-        imgSrc: "src/images/cloud-computing.png",
+        imgSrc: "static/images/cloud-computing.png",
       },
       {
         header: "Clean Code",
-        imgSrc: "src/images/clean-code.jpg",
+        imgSrc: "static/images/clean-code.jpg",
       },
       {
         header: "Clean Architecture",
-        imgSrc: "src/images/clean-arch.jpg",
+        imgSrc: "static/images/clean-arch.jpg",
       },
       {
         header: "Domain Driven Design",
-        imgSrc: "src/images/ddd.jpg",
+        imgSrc: "static/images/ddd.jpg",
       },
       {
         header: "Functional",
-        imgSrc: "src/images/functional.png",
+        imgSrc: "static/images/functional.png",
       },
       {
         header: "Asynchronous",
-        imgSrc: "src/images/async.png",
+        imgSrc: "static/images/async.png",
       },
     ],
   },
@@ -193,23 +193,23 @@ const skillsData = [
     skills: [
       {
         header: "Power Automate",
-        imgSrc: "src/images/power-automate.png",
+        imgSrc: "static/images/power-automate.png",
       },
       {
         header: "Model Driven Apps",
-        imgSrc: "src/images/power-apps.webp",
+        imgSrc: "static/images/power-apps.webp",
       },
       {
         header: "Canvas Apps",
-        imgSrc: "src/images/power-apps.webp",
+        imgSrc: "static/images/power-apps.webp",
       },
       {
         header: "Dataverse",
-        imgSrc: "src/images/dataverse.png",
+        imgSrc: "static/images/dataverse.png",
       },
       {
         header: "SharePoint",
-        imgSrc: "src/images/sharepoint.png",
+        imgSrc: "static/images/sharepoint.png",
       },
     ],
   },
