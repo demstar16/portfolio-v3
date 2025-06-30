@@ -8,7 +8,7 @@ const Header = withStyles((theme) => ({
     fontSize: "1.3rem",
   },
 }))(({ classes, className, children }) => (
-  <h1 className={clsx(className, classes.root)}>{children}</h1>
+  <h1 className={clsx(classes.root, className)}>{children}</h1>
 ));
 
 export default Header;

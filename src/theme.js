@@ -16,6 +16,10 @@ const theme = createTheme({
     text: {
       primary: "#dff297",
     },
+    colors: {
+      black: "#000",
+      white: "#fff",
+    },
   },
   typography: {
     fontFamily: "Rokkitt",

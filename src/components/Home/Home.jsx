@@ -54,12 +54,11 @@ const Home = withStyles((theme) => ({
         <div className={classes.about}>
           <Header className={classes.header}>Dempsey Thompson</Header>
           <Subtitle className={classes.subtitle}>
-            {`I started my journey as a software engineer, building scalable systems and writing code that my future self would thank me for (most of the time). These days, I’m diving deep into Power Platform development—automating processes, mapping out business workflows, and delivering solutions that actually make people’s lives easier. On the side, I keep my software engineering toolkit sharp and occasionally wander into the worlds of cybersecurity, system architecture, and game dev—because why have one tech obsession when you can have three? 
-        `}
+            {`My name is Dempsey, I am a software engineer passionate about clean code, architecture, design, and solving problems. I love building user centered solutions to provide value. I am proficient in JavaScript, TypeScript, React, and Bash. One of my favorite takeaways from the graduate program I completed would have to be the fear of the mouse, VIM key bindings rain supreme. I now look for anyway I can to optimise my workflow. I recently dove into low code solutions in the microsoft ecosystem, enhancing my soft skills - particularly in good communication and working close with the client.`}
           </Subtitle>
           <br />
           <Subtitle className={classes.subtitle}>
-            {`Outside of the tech space, I enjoy playing rugby union, surfing, and watching anime :)`}
+            {`Outside of the software world, I have a big passion for rugby (I play it myself), love getting down to the beach for a surf, keeping up to date with my favorite TV shows, and I am currently learning guitar.`}
           </Subtitle>
         </div>
         <img src="src/images/ai-portrait.png" className={classes.image} />

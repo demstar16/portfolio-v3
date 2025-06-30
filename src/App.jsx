@@ -14,10 +14,10 @@ const Wrapper = withStyles((theme) => ({
     backgroundSize: "50px 50px",
     backgroundImage: `linear-gradient(to right, ${alpha(
       theme.palette.secondary.main,
-      0.3
+      0.3,
     )} 1px, transparent 1px), linear-gradient(to bottom, ${alpha(
       theme.palette.secondary.main,
-      0.3
+      0.3,
     )} 1px, transparent 1px)`,
     overflow: "hidden",
     overflowY: "hidden",

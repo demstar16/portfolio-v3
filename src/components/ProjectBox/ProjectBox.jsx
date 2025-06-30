@@ -3,8 +3,8 @@ import { withStyles } from "@mui/styles";
 const ProjectBox = withStyles(() => ({
   root: {
     position: "relative",
-    width: "15rem",
-    height: "15rem",
+    width: "25rem",
+    // height: "100%",
     borderRadius: "10px",
 
     "&:hover $overlayDescription": {
@@ -36,16 +36,21 @@ const ProjectBox = withStyles(() => ({
   },
   header: {
     fontWeight: "700",
-    fontSize: "24px",
+    fontSize: "1.2rem",
   },
-}))(({ classes, header }) => {
+  text: {
+    fontWeight: "700",
+    fontSize: "1rem",
+  },
+}))(({ classes, header, imgSrc, description, onClick }) => {
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={onClick}>
       <div className={classes.baseImage}>
-        <img src="src/images/ai-portrait.png" className={classes.image} />
+        <img src={imgSrc} className={classes.image} />
       </div>
       <div className={classes.overlayDescription}>
         <h1 className={classes.header}>{header}</h1>
+        <p className={classes.text}>{description}</p>
       </div>
     </div>
   );

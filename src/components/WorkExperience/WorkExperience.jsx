@@ -3,9 +3,24 @@ import { withStyles } from "@mui/styles";
 import clsx from "clsx";
 import { useState } from "react";
 import Header from "../Header";
-
-const j1Msg = `I am currently employed with JourneyOne having completed their graduate program. I received direct mentorship learning software best practices, particularly in the world of JavaScript and TypeScript, although we did go as far as learning Scheme in the SICP textbook. I also got the opportunity to work on one of their products, Jibility. Here I learnt lots about functional programming and working with a team. I am currently diving into the M365 space with my new work project.`;
-const genesMsg = `This internship was a big wake-up call, throwing me into the deep end of real-world software development. I worked with Rust and Python, contributed to building software solutions, and learned that picking the right library is an art—one that can make or break your sanity.`;
+const workExperienceData = [
+  {
+    company: "JourneyOne",
+    description: `As part of a tight-knit cohort of four, I spent several months under the guidance of a senior software engineer, diving deep into modern software practices and cloud fundamentals. We earned our AWS certifications, explored asynchronous and functional programming in JavaScript (with a healthy dose of Ramda), and developed a Connect4 game using TypeScript, Next.js, Vitest, Storybook, and Turbo—all while adhering to Clean Code, Clean Architecture, and DDD principles. We took test-driven development seriously (thanks, Jest), and also worked through programming fundamentals via Structure and Interpretation of Computer Programs—yes, in Scheme. Weekly lightning talks, book clubs, and a "live in your terminal" mantra (plus a borderline cultish appreciation for vim keybindings) made this experience as enriching as it was efficient. Bonus: I now type faster and with less risk of carpal tunnel.`,
+  },
+  {
+    company: "Jibility",
+    description: `Following the graduate program, I joined an internal team at JourneyOne working on Jibility, a business roadmapping tool with a seriously well-engineered codebase. Here, I leveled up my JavaScript and functional programming skills, navigated a large pre-existing codebase (lots of “aha!” moments), and gained a real appreciation for a clean Git working tree and the power of a well-written commit. We used MUI for theming (which was surprisingly fun), tackled internationalisation (i18n), and tracked our progress using Jira and StoriesOnBoard. This was also my first real experience with structured code reviews, and learning to work in a mature dev environment gave me insights I still carry today—like how valuable a well-named commit can be to your future self.`,
+  },
+  {
+    company: "GeneS",
+    description: `At GeneS, a bioinformatics-focused startup, I joined a remote team working on the not-so-small task of translating performance-critical Python code into Rust to supercharge data processing efficiency. This involved researching and evaluating Rust libraries suitable for scientific computing, then presenting our findings to guide technical decisions. It was a crash course in systems-level programming, and an even bigger lesson in remote teamwork, clear communication, and adapting quickly to unfamiliar domains. Bioinformatics may have been new to me, but debugging memory-safe code while deciphering gene data made for a uniquely nerdy and rewarding challenge.`,
+  },
+  {
+    company: "Sandfire",
+    description: `I’ve been sharpening my consulting skills at Sandfire, a copper mining company—quite a shift from software games and roadmaps to rocks and real-world operations. Working in the Microsoft ecosystem, I’ve been supporting and enhancing Canvas Power Apps, liaising with product owners to troubleshoot issues, roll out new features, and make sure nothing catches fire (and if it does, putting it out quickly). This role has deepened my knowledge of Power Automate, SharePoint, Dataverse, and Entra ID security practices. But just as importantly, it’s strengthened my soft skills—like understanding client needs, communicating clearly under pressure, and keeping stakeholders in the loop (even when the answer is “still investigating”). Not as much hands-on dev, but definitely plenty of growth.`,
+  },
+];
 
 const WorkExperience = withStyles((theme) => ({
   root: {
@@ -49,62 +64,30 @@ const WorkExperience = withStyles((theme) => ({
     },
   },
 }))(({ classes }) => {
-  const [experience, setExperience] = useState(j1Msg);
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [experience, setExperience] = useState(
+    workExperienceData[0].description,
+  );
+  const [activeTab, setActiveTab] = useState(workExperienceData[0].company);
 
   return (
     <div className={classes.root}>
       <Header>Professional Experience</Header>
       <div className={classes.experience}>
         <div className={classes.buttons}>
-          <button
-            className={clsx(
-              classes.button,
-              activeIndex === 1 ? classes.active : {}
-            )}
-            onClick={() => {
-              setExperience(j1Msg);
-              setActiveIndex(1);
-            }}
-          >
-            JourneyOne
-          </button>
-          <button
-            className={clsx(
-              classes.button,
-              activeIndex === 2 ? classes.active : {}
-            )}
-            onClick={() => {
-              setExperience(genesMsg);
-              setActiveIndex(2);
-            }}
-          >
-            GeneS
-          </button>
-          <button
-            className={clsx(
-              classes.button,
-              activeIndex === 3 ? classes.active : {}
-            )}
-            onClick={() => {
-              setExperience();
-              setActiveIndex(3);
-            }}
-          >
-            Jibility
-          </button>
-          <button
-            className={clsx(
-              classes.button,
-              activeIndex === 4 ? classes.active : {}
-            )}
-            onClick={() => {
-              setExperience();
-              setActiveIndex(4);
-            }}
-          >
-            Sandfire
-          </button>
+          {workExperienceData.map((workExperience) => (
+            <button
+              className={clsx(
+                classes.button,
+                activeTab === workExperience.company ? classes.active : {},
+              )}
+              onClick={() => {
+                setExperience(workExperience.description);
+                setActiveTab(workExperience.company);
+              }}
+            >
+              {workExperience.company}
+            </button>
+          ))}
         </div>
         <div className={classes.text}>{experience}</div>
       </div>
