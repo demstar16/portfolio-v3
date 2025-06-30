@@ -54,7 +54,7 @@ const Home = withStyles((theme) => ({
         <div className={classes.about}>
           <Header className={classes.header}>Dempsey Thompson</Header>
           <Subtitle className={classes.subtitle}>
-            {`My name is Dempsey, I am a software engineer passionate about clean code, architecture, design, and solving problems. I love building user centered solutions to provide value. I am proficient in JavaScript, TypeScript, React, and Bash. One of my favorite takeaways from the graduate program I completed would have to be the fear of the mouse, VIM key bindings rain supreme. I now look for anyway I can to optimise my workflow. I recently dove into low code solutions in the microsoft ecosystem, enhancing my soft skills - particularly in good communication and working close with the client.`}
+            {`I am a software engineer passionate about clean code, architecture, design, and solving problems. I love building user centered solutions to provide value. I am proficient in JavaScript, TypeScript, React, and Bash. One of my favorite takeaways from the graduate program I completed would have to be the fear of the mouse, VIM key bindings rain supreme. I now look for anyway I can to optimise my workflow. I recently dove into low code solutions in the microsoft ecosystem, enhancing my soft skills - particularly in good communication and working close with the client.`}
           </Subtitle>
           <br />
           <Subtitle className={classes.subtitle}>
