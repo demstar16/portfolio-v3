@@ -219,7 +219,8 @@ const Skills = withStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    maxWidth: "75vw",
+    maxWidth: "100%",
+    width: "100%",
   },
   buttons: {
     display: "flex",
@@ -268,6 +269,21 @@ const Skills = withStyles((theme) => ({
   },
   hide: {
     display: "none",
+  },
+  "@media (max-width: 768px)": {
+    button: {
+      fontSize: "0.8rem",
+    },
+    skills: {
+      padding: "0.7rem",
+      gap: "1rem",
+      border: `2px solid ${theme.palette.secondary.main}`,
+    },
+    active: {
+      borderTop: `2px solid ${theme.palette.secondary.main}`,
+      borderRight: `2px solid ${theme.palette.secondary.main}`,
+      borderLeft: `2px solid ${theme.palette.secondary.main}`,
+    },
   },
 }))(({ classes }) => {
   const [activeTab, setActiveTab] = useState("languages");

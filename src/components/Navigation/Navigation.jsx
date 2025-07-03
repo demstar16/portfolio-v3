@@ -1,10 +1,11 @@
-import { GitHub } from "@mui/icons-material";
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import { alpha } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import useActiveSection from "../../hooks/useActiveSection";
 import Linkedin from "../../icons/Linkedin";
 import Link from "../Link";
+import Notes from "../../icons/Notes";
+import GitHub from "../../icons/GitHub";
+import clsx from "clsx";
 
 const sections = ["home", "projects", "experience"];
 
@@ -25,6 +26,12 @@ const SecondaryNavBox = withStyles((theme) => ({
     "&:hover": {
       border: `4px solid ${alpha(theme.palette.secondary.main, 0.5)}`,
       color: alpha(theme.palette.secondary.main, 0.5),
+    },
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      padding: "0",
+      border: "none",
     },
   },
 }))(({ classes, children, href }) => (
@@ -50,8 +57,10 @@ const Navigation = withStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
-    gap: "3rem",
+    width: "100%",
     display: "flex",
+    gap: "2rem",
+    justifyContent: "space-around",
     padding: "1rem 4rem",
   },
   active: {
@@ -63,8 +72,42 @@ const Navigation = withStyles((theme) => ({
     },
   },
   icon: {
+    width: "30px",
+    maxWidth: "30px",
     "&:hover": {
       color: alpha(theme.palette.secondary.main, 0.5),
+    },
+  },
+  secondaryNavOptions: {
+    display: "flex",
+    gap: "1rem",
+  },
+  linkWidth: {
+    width: "100%",
+    textAlign: "center",
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      backgroundColor: theme.palette.primary.main,
+      border: `2px solid ${theme.palette.secondary.main}`,
+      position: "sticky",
+      margin: "0",
+      fontSize: "1rem",
+      gap: "0",
+      width: "100vw",
+      flexDirection: "column",
+    },
+    navbar: {
+      backgroundColor: "inherit",
+      border: "none",
+      padding: "0.5rem 1rem",
+    },
+    icon: {
+      maxWidth: "1rem",
+    },
+    secondaryNavOptions: {
+      paddingBottom: "1rem",
+      gap: "1rem",
     },
   },
 }))(({ classes }) => {
@@ -77,21 +120,26 @@ const Navigation = withStyles((theme) => ({
           <Link
             key={section}
             href={`#${section}`}
-            className={activeSection === section ? classes.active : ""}
+            className={clsx(
+              classes.linkWidth,
+              activeSection === section ? classes.active : "",
+            )}
           >
             {toTitleCase(section)}
           </Link>
         ))}
       </nav>
-      <SecondaryNavBox href="https://notes.d-sons.com/docs">
-        <LibraryBooksIcon fontSize="large" />
-      </SecondaryNavBox>
-      <SecondaryNavBox href="https://www.linkedin.com/in/dempsey-thompson-b91614197/">
-        <Linkedin />
-      </SecondaryNavBox>
-      <SecondaryNavBox href="https://github.com/demstar16">
-        <GitHub fontSize="large" />
-      </SecondaryNavBox>
+      <div className={classes.secondaryNavOptions}>
+        <SecondaryNavBox href="https://notes.d-sons.com/docs">
+          <Notes className={classes.icon} />
+        </SecondaryNavBox>
+        <SecondaryNavBox href="https://www.linkedin.com/in/dempsey-thompson-b91614197/">
+          <Linkedin className={classes.icon} />
+        </SecondaryNavBox>
+        <SecondaryNavBox href="https://github.com/demstar16">
+          <GitHub className={classes.icon} />
+        </SecondaryNavBox>
+      </div>
     </div>
   );
 });

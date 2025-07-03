@@ -3,44 +3,41 @@ import clsx from "clsx";
 import Certifications from "../Certifications";
 import Skills from "../Skills";
 import WorkExperience from "../WorkExperience";
-
-const ExperienceWrapper = withStyles(() => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-  },
-}))(({ classes, className, children, id }) => (
-  <div className={clsx(classes.root, className)} id={id}>
-    {children}
-  </div>
-));
+import Wrapper from "../Wrapper";
 
 const Experience = withStyles(() => ({
   root: {
-    width: "90%",
+    maxWidth: "1200px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "2rem",
   },
   verticalDivider: {
     display: "flex",
     gap: "1rem",
+    maxWidth: "100%",
+    alignItems: "stretch",
   },
   horizontalDivider: {
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
+    maxWidth: "100%",
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      width: "90%",
+    },
+    verticalDivider: { flexDirection: "column" },
   },
 }))(({ classes }) => (
-  <ExperienceWrapper className={classes.root} id="experience">
+  <Wrapper className={classes.root} id="experience">
     <div className={classes.verticalDivider}>
-      <div className={classes.horizontalDivider}>
-        <WorkExperience />
-        <Skills />
-      </div>
+      <WorkExperience />
       <Certifications />
     </div>
-  </ExperienceWrapper>
+    <Skills />
+  </Wrapper>
 ));
 
 export default Experience;

@@ -19,6 +19,7 @@ const theme = createTheme({
     colors: {
       black: "#000",
       white: "#fff",
+      lightBlue: "#3257A",
     },
   },
   typography: {

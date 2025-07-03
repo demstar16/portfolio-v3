@@ -1,4 +1,5 @@
 import { withStyles } from "@mui/styles";
+import Wrapper from "../Wrapper";
 import clsx from "clsx";
 import ProjectBox from "../ProjectBox";
 import Header from "../Header";
@@ -60,22 +61,6 @@ const projectData = [
   },
 ];
 
-const ProjectsWrapper = withStyles(() => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100vw",
-    height: "100vh",
-    gap: "1rem",
-  },
-}))(({ classes, children, id }) => (
-  <div className={classes.root} id={id}>
-    {children}
-  </div>
-));
-
 const Projects = withStyles(() => ({
   root: {
     display: "flex",
@@ -88,12 +73,17 @@ const Projects = withStyles(() => ({
     fontSize: "2rem",
   },
   projects: {},
+  "@media (max-width: 768px)": {
+    root: {
+      maxWidth: "100%",
+    },
+  },
 }))(({ classes }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState();
 
   return (
-    <ProjectsWrapper id="projects">
+    <Wrapper id="projects">
       <Header className={classes.header}>Projects</Header>
       <div className={clsx(classes.root)}>
         {projectData.map((project) => (
@@ -113,7 +103,7 @@ const Projects = withStyles(() => ({
       ) : (
         <></>
       )}
-    </ProjectsWrapper>
+    </Wrapper>
   );
 });
 export default Projects;

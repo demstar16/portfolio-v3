@@ -10,7 +10,6 @@ const Certifications = withStyles((theme) => ({
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
     padding: "1rem",
-    height: "fit-content",
   },
   image: {
     width: "7rem",
@@ -20,6 +19,15 @@ const Certifications = withStyles((theme) => ({
     flexDirection: "column",
     gap: "1rem",
     padding: "0.8rem",
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      border: `2px solid ${theme.palette.secondary.main}`,
+    },
+    badgeWrapper: {
+      flexDirection: "row",
+      justifyContent: "space-around",
+    },
   },
 }))(({ classes }) => (
   <div className={classes.root}>

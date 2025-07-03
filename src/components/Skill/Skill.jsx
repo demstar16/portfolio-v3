@@ -1,4 +1,5 @@
 import { withStyles } from "@mui/styles";
+import Header from "../Header";
 
 const Skill = withStyles(() => ({
   root: {
@@ -19,10 +20,22 @@ const Skill = withStyles(() => ({
     textDecoration: "underline",
     textAlign: "center",
   },
+  "@media (max-width: 768px)": {
+    root: {
+      justifyContent: "center",
+    },
+    img: {
+      maxWidth: "2rem",
+      maxHeight: "2rem",
+    },
+    header: {
+      fontSize: "0.6rem",
+    },
+  },
 }))(({ classes, imgSrc, header }) => (
   <div className={classes.root}>
     <img className={classes.img} src={imgSrc} />
-    <h1 className={classes.header}>{header}</h1>
+    <Header className={classes.header}>{header}</Header>
   </div>
 ));
 

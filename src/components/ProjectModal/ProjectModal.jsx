@@ -19,11 +19,10 @@ const ProjectModal = withStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    gap: "1rem",
     width: "60%",
     padding: "2rem 5rem",
     borderRadius: "10px",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "rgb(50, 88, 122)",
     border: `4px solid ${theme.palette.secondary.main}`,
     zIndex: 9999,
   },
@@ -31,6 +30,7 @@ const ProjectModal = withStyles((theme) => ({
     display: "flex",
     width: "fit-content",
     gap: "5px",
+    margin: "1rem 0",
   },
   icon: {
     width: "2rem",
@@ -66,6 +66,12 @@ const ProjectModal = withStyles((theme) => ({
   githubIcon: {
     width: "1.5rem",
     maxHeight: "1.5rem",
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      width: "90%",
+      padding: "1rem",
+    },
   },
 }))(({ classes, project, setShowModal }) => {
   return (

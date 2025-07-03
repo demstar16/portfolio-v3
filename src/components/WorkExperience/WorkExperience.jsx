@@ -3,6 +3,7 @@ import { withStyles } from "@mui/styles";
 import clsx from "clsx";
 import { useState } from "react";
 import Header from "../Header";
+import { MarginTwoTone } from "@mui/icons-material";
 const workExperienceData = [
   {
     company: "JourneyOne",
@@ -61,6 +62,22 @@ const WorkExperience = withStyles((theme) => ({
 
     "&:hover": {
       color: theme.palette.secondary.main,
+    },
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      border: `2px solid ${theme.palette.secondary.main}`,
+    },
+    experience: { flexDirection: "column" },
+    buttons: {
+      flexDirection: "row",
+    },
+    button: {
+      textAlign: "center",
+    },
+    text: {
+      padding: "0.5rem 0.7rem",
+      marginTop: "0.5rem",
     },
   },
 }))(({ classes }) => {

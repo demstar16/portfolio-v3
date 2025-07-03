@@ -7,6 +7,9 @@ const Header = withStyles((theme) => ({
     fontWeight: "700",
     fontSize: "1.3rem",
   },
+  "@media (max-width: 768px)": {
+    root: { fontSize: "1.2rem" },
+  },
 }))(({ classes, className, children }) => (
   <h1 className={clsx(classes.root, className)}>{children}</h1>
 ));

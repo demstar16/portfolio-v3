@@ -1,11 +1,12 @@
 import { withStyles } from "@mui/styles";
 
-const ProjectBox = withStyles(() => ({
+const ProjectBox = withStyles((theme) => ({
   root: {
     position: "relative",
     width: "25rem",
     // height: "100%",
     borderRadius: "10px",
+    border: `2px solid ${theme.palette.secondary.main}`,
 
     "&:hover $overlayDescription": {
       opacity: 1,
@@ -41,6 +42,11 @@ const ProjectBox = withStyles(() => ({
   text: {
     fontWeight: "700",
     fontSize: "1rem",
+  },
+  "@media (max-width: 768px)": {
+    root: {
+      width: "90%",
+    },
   },
 }))(({ classes, header, imgSrc, description, onClick }) => {
   return (

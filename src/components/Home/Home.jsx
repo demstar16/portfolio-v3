@@ -1,31 +1,19 @@
 import { withStyles } from "@mui/styles";
+import Wrapper from "../Wrapper";
 import Header from "../Header";
 import Subtitle from "../Subtitle";
-
-const HomeWrapper = withStyles(() => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100vw",
-    height: "100vh",
-  },
-}))(({ classes, children, id }) => (
-  <div className={classes.root} id={id}>
-    {children}
-  </div>
-));
 
 const Home = withStyles((theme) => ({
   root: {
     display: "flex",
+    gap: "1rem",
     backgroundColor: theme.palette.primary.main,
     width: "90%",
     padding: "1rem 5rem",
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
   },
+  mobile: {},
   about: {
     display: "flex",
     flexDirection: "column",
@@ -47,9 +35,25 @@ const Home = withStyles((theme) => ({
     borderRadius: "20px",
     maxHeight: "25rem",
   },
+  "@media (max-width: 768px)": {
+    root: {
+      flexDirection: "column-reverse",
+      padding: "1rem 2rem",
+    },
+    image: {
+      borderRadius: "10px",
+      maxHeight: "auto",
+    },
+    header: {
+      fontSize: "1.5rem",
+    },
+    subtitle: {
+      fontSize: "0.8rem",
+    },
+  },
 }))(({ classes }) => {
   return (
-    <HomeWrapper id="home">
+    <Wrapper id="home">
       <div className={classes.root}>
         <div className={classes.about}>
           <Header className={classes.header}>Dempsey Thompson</Header>
@@ -63,7 +67,7 @@ const Home = withStyles((theme) => ({
         </div>
         <img src="static/images/ai-portrait.png" className={classes.image} />
       </div>
-    </HomeWrapper>
+    </Wrapper>
   );
 });
 
