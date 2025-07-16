@@ -56,7 +56,16 @@ const projectData = [
       "CLI tool to kickstart projects, avoiding initial set up and config hassles.",
     techStack: ["js.png"],
     imgSrc: "static/images/template-cli.png",
-    repository: "https://github.com/dempseyt/template-cli",
+    repository: "https://github.com/demstar16/template-cli",
+    demo: "",
+  },
+  {
+    title: "TDD Modules",
+    description: "A collection of javascript, ramda, and redux functions re-created under Test-Driven Development principles during my time in the JourneyOne Graduate Program. We tackled complex built-in JavaScript functions, Ramda functions, and Redux functions.",
+    shortDescription: "A collection of functions created under test, for learning both TDD and the functions themselves.",
+    techStack: ["jest.png", "js.png", "ts.png", "ramda.svg", "redux.png"],
+    imgSrc: "static/images/tdd.png",
+    repository: "https://github.com/demstar16/tdd-modules",
     demo: "",
   },
 ];
