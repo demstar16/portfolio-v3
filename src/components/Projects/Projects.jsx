@@ -70,6 +70,17 @@ const projectData = [
     repository: "https://github.com/demstar16/tdd-modules",
     demo: "",
   },
+  {
+    title: "This Site",
+    description:
+      "A static portfolio site built with React, MUI, and Vite to showcase who I am, projects I've worked on, my work experience, and links to other technical resources/profiles I have.",
+    shortDescription:
+      "A static portfolio site built with React, MUI, and Vite to showcase my work.",
+    techStack: ["react.png", "js.png", "mui.png", "vite.png"],
+    imgSrc: "static/images/portfolio.png",
+    repository: "",
+    demo: "",
+  },
 ];
 
 const Projects = withStyles(() => ({
