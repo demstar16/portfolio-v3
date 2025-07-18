@@ -8,7 +8,7 @@ const Home = withStyles((theme) => ({
     display: "flex",
     gap: "1rem",
     backgroundColor: theme.palette.primary.main,
-    width: "90%",
+    maxWidth: "80%",
     padding: "1rem 5rem",
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
@@ -33,7 +33,8 @@ const Home = withStyles((theme) => ({
   },
   image: {
     borderRadius: "20px",
-    maxHeight: "25rem",
+    maxHeight: "auto",
+    padding: "0 5rem",
   },
   "@media (max-width: 768px)": {
     root: {
@@ -43,12 +44,18 @@ const Home = withStyles((theme) => ({
     image: {
       borderRadius: "10px",
       maxHeight: "auto",
+      padding: "0 1rem",
     },
     header: {
       fontSize: "1.5rem",
     },
     subtitle: {
       fontSize: "0.8rem",
+    },
+  },
+  "@media (min-width: 768px) and  (max-width: 1050px)": {
+    root: {
+      flexDirection: "column-reverse",
     },
   },
 }))(({ classes }) => {

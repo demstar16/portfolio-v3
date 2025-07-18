@@ -41,7 +41,7 @@ const WorkExperience = withStyles((theme) => ({
     alignItems: "flex-start",
   },
   button: {
-    width: "15rem",
+    width: "10rem",
     textAlign: "left",
     padding: "1rem 0",
     cursor: "pointer",

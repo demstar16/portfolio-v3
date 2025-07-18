@@ -7,7 +7,7 @@ import Wrapper from "../Wrapper";
 
 const Experience = withStyles(() => ({
   root: {
-    maxWidth: "1200px",
+    maxWidth: "80%",
     display: "flex",
     flexDirection: "column",
     gap: "2rem",
@@ -24,7 +24,7 @@ const Experience = withStyles(() => ({
     gap: "1rem",
     maxWidth: "100%",
   },
-  "@media (max-width: 768px)": {
+  "@media (max-width: 1050px)": {
     root: {
       width: "90%",
     },

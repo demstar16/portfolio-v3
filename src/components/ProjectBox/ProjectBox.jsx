@@ -3,8 +3,9 @@ import { withStyles } from "@mui/styles";
 const ProjectBox = withStyles((theme) => ({
   root: {
     position: "relative",
-    width: "25rem",
-    // height: "100%",
+    minWidth: "18rem",
+    flex: 1,
+    maxWidth: "100%",
     borderRadius: "10px",
     border: `2px solid ${theme.palette.secondary.main}`,
 

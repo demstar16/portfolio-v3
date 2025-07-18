@@ -20,7 +20,7 @@ const Certifications = withStyles((theme) => ({
     gap: "1rem",
     padding: "0.8rem",
   },
-  "@media (max-width: 768px)": {
+  "@media (max-width: 1050px)": {
     root: {
       border: `2px solid ${theme.palette.secondary.main}`,
     },
