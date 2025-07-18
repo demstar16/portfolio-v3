@@ -15,8 +15,10 @@ const ProjectModal = withStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     zIndex: 999, // high enough to be above all other content
+    cursor: "pointer",
   },
   root: {
+    cursor: "default",
     display: "flex",
     flexDirection: "column",
     width: "60%",
