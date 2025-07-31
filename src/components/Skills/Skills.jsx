@@ -293,6 +293,7 @@ const Skills = withStyles((theme) => ({
       <div className={classes.buttons}>
         {skillsData.map((section) => (
           <button
+            key={section.title}
             className={clsx(
               classes.button,
               activeTab === section.title ? classes.active : {},
@@ -305,13 +306,18 @@ const Skills = withStyles((theme) => ({
       </div>
       {skillsData.map((section) => (
         <div
+          key={section.title}
           id={section.title}
           className={
             activeTab === section.title ? classes.skills : classes.hide
           }
         >
           {section.skills.map((skill) => (
-            <Skill imgSrc={skill.imgSrc} header={skill.header} />
+            <Skill
+              key={skill.header}
+              imgSrc={skill.imgSrc}
+              header={skill.header}
+            />
           ))}
         </div>
       ))}

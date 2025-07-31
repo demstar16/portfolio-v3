@@ -110,6 +110,7 @@ const Projects = withStyles(() => ({
       <div className={clsx(classes.root)}>
         {projectData.map((project) => (
           <ProjectBox
+            key={project.title}
             header={project.title}
             imgSrc={project.imgSrc}
             description={project.shortDescription}

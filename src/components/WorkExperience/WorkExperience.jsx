@@ -93,6 +93,7 @@ const WorkExperience = withStyles((theme) => ({
         <div className={classes.buttons}>
           {workExperienceData.map((workExperience) => (
             <button
+              key={workExperience.company}
               className={clsx(
                 classes.button,
                 activeTab === workExperience.company ? classes.active : {},
