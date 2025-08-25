@@ -68,7 +68,7 @@ const projectData = [
     ],
     imgSrc: "static/images/connect4-game.png",
     repository: "https://github.com/dempseyt/connect4",
-    demo: "http://dempsey-connect-4-bucket.s3-website-ap-southeast-2.amazonaws.com/",
+    demo: "",
   },
   {
     title: "Project Bootstart",
