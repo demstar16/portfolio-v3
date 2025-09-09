@@ -4,6 +4,8 @@ const useActiveSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    if (!sectionIds || sectionIds.length === 0) return;
+
     const options = {
       root: null, // viewport
       rootMargin: "0px",
@@ -11,25 +13,26 @@ const useActiveSection = (sectionIds) => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length > 0) {
+        setActiveSection(visible[0].target.id);
+      }
     }, options);
 
-    sectionIds.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
-    });
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      sectionIds.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section) observer.unobserve(section);
-      });
+      elements.forEach((el) => observer.unobserve(el));
+      observer.disconnect();
     };
-  }, [sectionIds]);
+  }, [sectionIds.join(",")]); // ensures stable deps
 
   return activeSection;
 };
