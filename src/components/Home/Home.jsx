@@ -23,7 +23,7 @@ const Home = withStyles((theme) => ({
   },
   subtitle: {
     textAlign: "start",
-    fontSize: "1.3rem",
+    fontSize: "1rem",
   },
   icon: {
     cursor: "pointer",
@@ -33,8 +33,8 @@ const Home = withStyles((theme) => ({
   },
   image: {
     borderRadius: "20px",
-    maxHeight: "auto",
-    padding: "0 5rem",
+    maxHeight: "25rem",
+    maxWidth: "25rem",
   },
   "@media (max-width: 768px)": {
     root: {
@@ -50,12 +50,15 @@ const Home = withStyles((theme) => ({
       fontSize: "1.5rem",
     },
     subtitle: {
-      fontSize: "0.8rem",
+      fontSize: "0.9rem",
     },
   },
   "@media (min-width: 768px) and  (max-width: 1050px)": {
     root: {
       flexDirection: "column-reverse",
+    },
+    subtitle: {
+      fontSize: "1.6rem",
     },
   },
 }))(({ classes }) => {
@@ -72,7 +75,7 @@ const Home = withStyles((theme) => ({
             {`Outside of the software world, I have a big passion for rugby (I play it myself), love getting down to the beach for a surf, keeping up to date with my favorite TV shows, and I am currently learning guitar.`}
           </Subtitle>
         </div>
-        <img src="static/images/ai-portrait.png" className={classes.image} />
+        <img src="static/images/profile-pic.png" className={classes.image} />
       </div>
     </Wrapper>
   );
