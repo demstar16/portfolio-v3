@@ -37,7 +37,7 @@
     "techStack": ["python.webp", "flask.webp", "js.png"],
     "imgSrc": "static/images/adam-sandler.png",
     "repository": "https://github.com/demstar16/adam-sandler-audio-wordle",
-    "demo": ""
+    "demo": "https://adam-sandler-audio-wordle.onrender.com/"
   },
   {
     "title": "TDD Modules",
