@@ -1,0 +1,86 @@
+[
+  {
+    "title": "CEWA Calculator",
+    "description": "A full stack application for calculating the best fit machine for a client.\nBackend: Node.js, Express, Mongoose, NGINX, MongoDB Atlas, AWS EC2, AWS CloudFormation, PM2\nFrontend: Next.js, React, Emotion",
+    "shortDescription": "A full stack application for calculating the best fit machine for a client.",
+    "techStack": [
+      "js.png",
+      "node.png",
+      "mongoose.png",
+      "nginx.webp",
+      "mongodb.webp",
+      "aws.png",
+      "aws-ec2.svg",
+      "cloudformation.png",
+      "pm2.webp",
+      "nextjs.svg",
+      "react.png",
+      "emotion.png"
+    ],
+    "imgSrc": "static/images/cewa-calc.png",
+    "repository": "",
+    "demo": "https://calculator.cleaningequipmentwa.com.au"
+  },
+  {
+    "title": "Triumph",
+    "description": "Triumph is a strategic terminal game developed in Python, leveraging matplotlib for dynamic visualisation, NGINX for serving game assets, and Bayesian mathematics to simulate persuasion and belief shifts within a population. Set in a fictional political landscape, players choose to side with either the Government or the Resistance, each aiming to win public support through carefully chosen dialogue and strategic moves. Every interaction influences probabilistic outcomes, with the government wielding tools like surveillance and covert operations. The project blends game theory, narrative design, and statistical modelling into a unique, text-based gameplay experience.",
+    "shortDescription": "Triumph is a CLI political wargame built with Python, and Bayesian modelling, where players shape public opinion through strategic dialogue as either the Government or the Resistance.",
+    "techStack": ["python.webp", "numpy.png", "matplotlib.png", "networkx.png"],
+    "imgSrc": "static/images/triumph.png",
+    "repository": "https://github.com/demstar16/triumph",
+    "demo": ""
+  },
+  {
+    "title": "Adam Sandler Audio Wordle",
+    "description": "Web game where players listen to a short clip and guess which Adam Sandler movie it’s from. Built with Flask, Python, and JavaScript, the game uses cookies and local storage to track user progress and enforce daily challenge limits. It blends nostalgia with logic, offering a surprisingly strategic experience for anyone who’s seen Happy Gilmore one too many times.",
+    "shortDescription": "A wordle clone created with Flask where you have to guess which movie an Adam Sandler movie audio clip is from.",
+    "techStack": ["python.webp", "flask.webp", "js.png"],
+    "imgSrc": "static/images/adam-sandler.png",
+    "repository": "https://github.com/demstar16/adam-sandler-audio-wordle",
+    "demo": ""
+  },
+  {
+    "title": "TDD Modules",
+    "description": "A collection of Javascript, Ramda, and Redux functions re-created under Test-Driven Development principles during my time in the JourneyOne Graduate Program. This was a great approach for learning TDD, the functions themselves, good test coverage, working backwards, and a unique but effective way of thinking and development.",
+    "shortDescription": "A collection of functions created under test, for learning both TDD and complex functions in-depth.",
+    "techStack": ["jest.png", "js.png", "ts.png", "ramda.svg", "redux.png"],
+    "imgSrc": "static/images/tdd.png",
+    "repository": "https://github.com/demstar16/tdd-modules",
+    "demo": ""
+  },
+  {
+    "title": "This Site",
+    "description": "A static portfolio site built with React, MUI, and Vite to showcase who I am, projects I've worked on, my work experience, and links to other technical resources/profiles I have.",
+    "shortDescription": "A static portfolio site built with React, MUI, and Vite to showcase my work.",
+    "techStack": ["react.png", "js.png", "mui.png", "vite.png"],
+    "imgSrc": "static/images/portfolio.png",
+    "repository": "https://github.com/demstar16/portfolio-v3",
+    "demo": ""
+  },
+  {
+    "title": "Connect4",
+    "description": "A modern web-based Connect4 game deployed on AWS and built with TypeScript, React, Next.js, Turbo, Vitest, and Storybook. It features a responsive UI, clean component architecture, and smooth gameplay. Developed with a monorepo-first approach using Turbo for efficient builds and caching, the project emphasizes test-driven development and visual documentation for scalable, high-performance front-end engineering.",
+    "shortDescription": "A modern Connect4 game built with TypeScript, React, and Next.js in a Turbo-powered monorepo, featuring smooth gameplay, responsive UI, and test-driven development—all deployed on AWS.",
+    "techStack": [
+      "ts.png",
+      "react.png",
+      "vitest.png",
+      "turbo.png",
+      "nextjs.svg",
+      "storybook.png",
+      "aws.png"
+    ],
+    "imgSrc": "static/images/connect4-game.png",
+    "repository": "https://github.com/dempseyt/connect4",
+    "demo": ""
+  },
+  {
+    "title": "Project Bootstart",
+    "description": "Project Kickstart is a command-line tool built with JavaScript that streamlines the creation of new projects by scaffolding boilerplate code and auto-configuring essential .dotfiles. Designed to save time and eliminate repetitive setup tasks, it handles everything from folder structure to initial config for tools like ESLint, Prettier, and Git—so you can jump straight into writing code instead of setting it up.",
+    "shortDescription": "CLI tool to kickstart projects, avoiding initial set up and config hassles.",
+    "techStack": ["js.png"],
+    "imgSrc": "static/images/template-cli.png",
+    "repository": "https://github.com/demstar16/template-cli",
+    "demo": ""
+  }
+]

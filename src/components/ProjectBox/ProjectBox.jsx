@@ -6,7 +6,7 @@ const ProjectBox = withStyles((theme) => ({
     minWidth: "20rem",
     flex: 1,
     maxWidth: "100%",
-    borderRadius: "10px",
+    borderRadius: "12px",
     border: `2px solid ${theme.palette.secondary.main}`,
 
     "&:hover $overlayDescription": {
@@ -57,7 +57,9 @@ const ProjectBox = withStyles((theme) => ({
       </div>
       <div className={classes.overlayDescription}>
         <h1 className={classes.header}>{header}</h1>
-        <p className={classes.text}>{description}</p>
+        <p style={{ whiteSpace: "pre-line" }} className={classes.text}>
+          {description}
+        </p>
       </div>
     </div>
   );

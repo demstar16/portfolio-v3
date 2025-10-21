@@ -1,7 +1,8 @@
-import { withStyles } from "@mui/styles";
-import Header from "../Header";
 import { alpha } from "@mui/material";
+import { withStyles } from "@mui/styles";
 import clsx from "clsx";
+import Header from "../Header";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const ProjectModal = withStyles((theme) => ({
   wrapper: {
@@ -77,13 +78,26 @@ const ProjectModal = withStyles((theme) => ({
   },
 }))(({ classes, project, setShowModal }) => {
   return (
-    <div className={classes.wrapper} onClick={() => setShowModal(false)}>
+    <div
+      key={project.title}
+      className={classes.wrapper}
+      onClick={() => setShowModal(false)}
+    >
       <div className={classes.root} onClick={(e) => e.stopPropagation()}>
         <Header>{project.title}</Header>
-        <p>{project.description}</p>
+        <p style={{ whiteSpace: "pre-line" }}>{project.description}</p>
+        {project.title === "Triumph" ? (
+          <VideoPlayer src="/static/videos/triumph.mov" />
+        ) : (
+          <></>
+        )}
         <div className={classes.techStack}>
           {project.techStack.map((imgFile) => (
-            <img src={"static/images/" + imgFile} className={classes.icon} />
+            <img
+              key={imgFile}
+              src={"static/images/" + imgFile}
+              className={classes.icon}
+            />
           ))}
         </div>
         <div className={classes.buttons}>
