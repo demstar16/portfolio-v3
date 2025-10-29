@@ -34,6 +34,7 @@ const ProjectModal = withStyles((theme) => ({
     width: "fit-content",
     gap: "5px",
     margin: "1rem 0",
+    flexWrap: "wrap",
   },
   icon: {
     width: "2rem",
