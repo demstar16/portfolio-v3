@@ -1,11 +1,11 @@
 import { alpha } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import useActiveSection from "../../hooks/useActiveSection";
-import Linkedin from "../../icons/Linkedin";
-import Link from "../Link";
-import Notes from "../../icons/Notes";
-import GitHub from "../../icons/GitHub";
 import clsx from "clsx";
+import useActiveSection from "../../hooks/useActiveSection";
+import GitHub from "../../icons/GitHub";
+import Linkedin from "../../icons/Linkedin";
+import Notes from "../../icons/Notes";
+import Link from "../Link";
 
 const sections = ["home", "projects", "experience"];
 
@@ -116,6 +116,7 @@ const Navigation = withStyles((theme) => ({
   return (
     <div className={classes.root}>
       <nav className={classes.navbar}>
+        <img src="/favicon.ico" style={{ width: "30px", height: "30px" }} />
         {sections.map((section) => (
           <Link
             key={section}

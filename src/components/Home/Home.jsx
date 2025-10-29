@@ -1,7 +1,7 @@
 import { withStyles } from "@mui/styles";
-import Wrapper from "../Wrapper";
 import Header from "../Header";
 import Subtitle from "../Subtitle";
+import Wrapper from "../Wrapper";
 
 const Home = withStyles((theme) => ({
   root: {
@@ -23,7 +23,7 @@ const Home = withStyles((theme) => ({
   },
   subtitle: {
     textAlign: "start",
-    fontSize: "1rem",
+    fontSize: "0.8rem",
   },
   icon: {
     cursor: "pointer",
@@ -50,15 +50,18 @@ const Home = withStyles((theme) => ({
       fontSize: "1.5rem",
     },
     subtitle: {
-      fontSize: "0.9rem",
+      fontSize: "0.8rem",
     },
   },
   "@media (min-width: 768px) and  (max-width: 1050px)": {
     root: {
       flexDirection: "column-reverse",
     },
+    header: {
+      fontSize: "1.5rem",
+    },
     subtitle: {
-      fontSize: "1.6rem",
+      fontSize: "1rem",
     },
   },
 }))(({ classes }) => {
