@@ -4,7 +4,7 @@ const ProjectBox = withStyles((theme) => ({
   root: {
     position: "relative",
     minWidth: "20rem",
-    flex: 1,
+    flex: "0 0 20rem",
     maxWidth: "100%",
     borderRadius: "12px",
     border: `2px solid ${theme.palette.secondary.main}`,
