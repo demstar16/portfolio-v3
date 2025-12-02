@@ -2,8 +2,8 @@ import { alpha } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import clsx from "clsx";
 import { useState } from "react";
-import Skill from "../Skill";
 import toTitleCase from "../../utilities/toTitleCase";
+import Skill from "../Skill";
 
 const skillsData = [
   {
@@ -58,10 +58,6 @@ const skillsData = [
       {
         header: "Tailwind",
         imgSrc: "static/images/tailwind.png",
-      },
-      {
-        header: "Styled Components",
-        imgSrc: "static/images/styled-components.png",
       },
       {
         header: "Jest",
@@ -122,10 +118,6 @@ const skillsData = [
         imgSrc: "static/images/vite.png",
       },
       {
-        header: "Yarn",
-        imgSrc: "static/images/yarn.png",
-      },
-      {
         header: "SQLite",
         imgSrc: "static/images/sqlite.png",
       },
@@ -145,10 +137,6 @@ const skillsData = [
         header: "Vim",
         imgSrc: "static/images/vim.png",
       },
-      {
-        header: "tmux",
-        imgSrc: "static/images/tmux.svg",
-      },
     ],
   },
   {
@@ -163,7 +151,7 @@ const skillsData = [
         imgSrc: "static/images/oop.png",
       },
       {
-        header: "Cloud Computing",
+        header: "Cloud",
         imgSrc: "static/images/cloud-computing.png",
       },
       {
@@ -171,11 +159,11 @@ const skillsData = [
         imgSrc: "static/images/clean-code.jpg",
       },
       {
-        header: "Clean Architecture",
+        header: "Clean Arch",
         imgSrc: "static/images/clean-arch.jpg",
       },
       {
-        header: "Domain Driven Design",
+        header: "DDD",
         imgSrc: "static/images/ddd.jpg",
       },
       {
@@ -196,7 +184,7 @@ const skillsData = [
         imgSrc: "static/images/power-automate.png",
       },
       {
-        header: "Model Driven Apps",
+        header: "MDA",
         imgSrc: "static/images/power-apps.webp",
       },
       {

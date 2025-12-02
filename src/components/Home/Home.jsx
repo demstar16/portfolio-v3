@@ -1,35 +1,60 @@
 import { withStyles } from "@mui/styles";
 import Header from "../Header";
 import Subtitle from "../Subtitle";
+import WaveAnimation from "../WaveAnimation";
 import Wrapper from "../Wrapper";
 
 const Home = withStyles((theme) => ({
   root: {
-    display: "flex",
-    gap: "1rem",
-    backgroundColor: theme.palette.primary.main,
     maxWidth: "80%",
     padding: "1rem 5rem",
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
+    paddingBottom: "2rem",
+    position: "relative",
+    overflow: "hidden",
   },
-  mobile: {},
+  backgroundContainer: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1,
+  },
+  aboutBg: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: theme.palette.primary.main,
+    zIndex: 1,
+  },
+  waveContainer: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 2,
+  },
+  infoContainer: {
+    position: "relative",
+    zIndex: 3,
+    display: "flex",
+    gap: "1rem",
+  },
   about: {
     display: "flex",
     flexDirection: "column",
+    flex: 1,
   },
   header: {
     fontSize: "3rem",
   },
   subtitle: {
     textAlign: "start",
-    fontSize: "0.8rem",
-  },
-  icon: {
-    cursor: "pointer",
-    "&:hover": {
-      color: theme.palette.secondary.main,
-    },
+    fontSize: "1.4rem",
   },
   image: {
     borderRadius: "20px",
@@ -38,12 +63,14 @@ const Home = withStyles((theme) => ({
   },
   "@media (max-width: 768px)": {
     root: {
-      flexDirection: "column-reverse",
       padding: "1rem 2rem",
     },
+    infoContainer: {
+      flexDirection: "column-reverse",
+    },
+    waveContainer: { top: "auto" },
     image: {
       borderRadius: "10px",
-      maxHeight: "auto",
       padding: "0 1rem",
     },
     header: {
@@ -53,10 +80,11 @@ const Home = withStyles((theme) => ({
       fontSize: "0.8rem",
     },
   },
-  "@media (min-width: 768px) and  (max-width: 1050px)": {
-    root: {
+  "@media (min-width: 768px) and (max-width: 1050px)": {
+    infoContainer: {
       flexDirection: "column-reverse",
     },
+    waveContainer: { top: "auto" },
     header: {
       fontSize: "1.5rem",
     },
@@ -68,17 +96,37 @@ const Home = withStyles((theme) => ({
   return (
     <Wrapper id="home">
       <div className={classes.root}>
-        <div className={classes.about}>
-          <Header className={classes.header}>Dempsey Thompson</Header>
-          <Subtitle className={classes.subtitle}>
-            {`I am a software engineer passionate about clean code, architecture, design, and solving problems. I love building user centered solutions to provide value. I am proficient in JavaScript, TypeScript, React, and Bash. One of my favorite takeaways from the graduate program I completed would have to be the fear of the mouse, VIM key bindings rain supreme. I now look for anyway I can to optimise my workflow. I recently dove into low code solutions in the microsoft ecosystem, enhancing my soft skills - particularly in good communication and working close with the client.`}
-          </Subtitle>
-          <br />
-          <Subtitle className={classes.subtitle}>
-            {`Outside of the software world, I have a big passion for rugby (I play it myself), love getting down to the beach for a surf, keeping up to date with my favorite TV shows, and I am currently learning guitar.`}
-          </Subtitle>
+        <div className={classes.backgroundContainer}>
+          <div className={classes.aboutBg}></div>
+          <div className={classes.waveContainer}>
+            <WaveAnimation />
+          </div>
         </div>
-        <img src="static/images/profile-pic.png" className={classes.image} />
+        <div className={classes.infoContainer}>
+          <div className={classes.about}>
+            <Header className={classes.header}>Dempsey Thompson</Header>
+            <Subtitle className={classes.subtitle}>
+              I like to think of myself as a software engineer however I've been
+              doing a lot more low-code stuff with work as of late. I am still
+              passionate for software, mainly working on full-stack application
+              projects in my spare time using predominantly JavaScript, React,
+              and AWS. Outside of this I enjoy bash scripting, work
+              optimisation/automation, and using VIM.
+            </Subtitle>
+            <br />
+            <Subtitle className={classes.subtitle}>
+              Outside of the software world, I have a big passion for rugby (I
+              play it myself), love getting down to the beach for a surf,
+              keeping up to date with my favorite TV shows, and exploring what
+              life has to offer.
+            </Subtitle>
+          </div>
+          <img
+            src="static/images/profile-pic.png"
+            alt="Profile"
+            className={classes.image}
+          />
+        </div>
       </div>
     </Wrapper>
   );
