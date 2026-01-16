@@ -104,34 +104,13 @@ const skillsData = [
         header: "Storybook",
         imgSrc: "static/images/storybook.png",
       },
-      { header: "Turbo", imgSrc: "static/images/turbo.png" },
-      {
-        header: "Jira",
-        imgSrc: "static/images/jira.svg",
-      },
       {
         header: "Postman",
         imgSrc: "static/images/postman.svg",
       },
       {
-        header: "Vite",
-        imgSrc: "static/images/vite.png",
-      },
-      {
         header: "SQLite",
         imgSrc: "static/images/sqlite.png",
-      },
-      {
-        header: "NPM",
-        imgSrc: "static/images/npm.png",
-      },
-      {
-        header: "ESLint",
-        imgSrc: "static/images/eslint.png",
-      },
-      {
-        header: "Prettier",
-        imgSrc: "static/images/prettier.png",
       },
       {
         header: "Vim",
@@ -142,18 +121,6 @@ const skillsData = [
   {
     title: "concepts",
     skills: [
-      {
-        header: "TDD",
-        imgSrc: "static/images/tdd.Default",
-      },
-      {
-        header: "OOP",
-        imgSrc: "static/images/oop.png",
-      },
-      {
-        header: "Cloud",
-        imgSrc: "static/images/cloud-computing.png",
-      },
       {
         header: "Clean Code",
         imgSrc: "static/images/clean-code.jpg",
@@ -166,14 +133,6 @@ const skillsData = [
         header: "DDD",
         imgSrc: "static/images/ddd.jpg",
       },
-      {
-        header: "Functional",
-        imgSrc: "static/images/functional.png",
-      },
-      {
-        header: "Asynchronous",
-        imgSrc: "static/images/async.png",
-      },
     ],
   },
   {
@@ -184,11 +143,7 @@ const skillsData = [
         imgSrc: "static/images/power-automate.png",
       },
       {
-        header: "MDA",
-        imgSrc: "static/images/power-apps.webp",
-      },
-      {
-        header: "Canvas Apps",
+        header: "Power Apps",
         imgSrc: "static/images/power-apps.webp",
       },
       {

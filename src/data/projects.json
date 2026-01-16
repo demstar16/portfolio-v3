@@ -1,7 +1,7 @@
 [
   {
     "title": "CEWA Calculator",
-    "description": "A full stack application for calculating the best fit machine for a client.\nBackend: Node.js, Express, Mongoose, NGINX, MongoDB Atlas, AWS EC2, AWS CloudFormation, PM2\nFrontend: Next.js, React, Emotion",
+    "description": "A full stack application for calculating the best fit machine for a client.\nBackend: Node.js, Express, Mongoose, NGINX, MongoDB Atlas, AWS EC2, PM2\nFrontend: Next.js, React, Emotion",
     "shortDescription": "A full stack application for calculating the best fit machine for a client.",
     "techStack": [
       "js.png",
