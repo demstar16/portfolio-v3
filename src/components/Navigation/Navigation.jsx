@@ -173,7 +173,7 @@ const Navigation = withStyles((theme) => ({
         ))}
       </nav>
       <div className={classes.secondaryNavOptions}>
-        <SecondaryNavBox href="https://notes.d-sons.com/docs">
+        <SecondaryNavBox href="https://notes.d-sons.com">
           <Notes className={classes.icon} />
         </SecondaryNavBox>
         <SecondaryNavBox href="https://www.linkedin.com/in/dempsey-thompson-b91614197/">
