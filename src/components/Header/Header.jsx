@@ -6,6 +6,8 @@ const Header = withStyles((theme) => ({
     color: theme.palette.secondary.main,
     fontWeight: "700",
     fontSize: "1.3rem",
+    fontFamily: '"JetBrains Mono", monospace',
+    letterSpacing: "-0.02em",
   },
   "@media (max-width: 768px)": {
     root: { fontSize: "1.2rem" },

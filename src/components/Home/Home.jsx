@@ -1,3 +1,4 @@
+import { alpha } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import Header from "../Header";
 import Subtitle from "../Subtitle";
@@ -13,6 +14,10 @@ const Home = withStyles((theme) => ({
     paddingBottom: "2rem",
     position: "relative",
     overflow: "hidden",
+    transition: "box-shadow 0.4s ease",
+    "&:hover": {
+      boxShadow: `0 10px 40px ${alpha(theme.palette.secondary.main, 0.15)}`,
+    },
   },
   backgroundContainer: {
     position: "absolute",
@@ -51,15 +56,26 @@ const Home = withStyles((theme) => ({
   },
   header: {
     fontSize: "3rem",
+    animation: "slideInLeft 0.6s ease-out",
   },
   subtitle: {
     textAlign: "start",
     fontSize: "1.4rem",
+    animation: "fadeInUp 0.6s ease-out 0.2s backwards",
+  },
+  subtitleDelayed: {
+    animation: "fadeInUp 0.6s ease-out 0.4s backwards",
   },
   image: {
     borderRadius: "20px",
     maxHeight: "25rem",
     maxWidth: "25rem",
+    animation: "slideInRight 0.6s ease-out",
+    transition: "transform 0.4s ease, box-shadow 0.4s ease",
+    "&:hover": {
+      transform: "scale(1.02)",
+      boxShadow: `0 15px 40px ${alpha(theme.palette.colors.black, 0.3)}`,
+    },
   },
   "@media (max-width: 768px)": {
     root: {
@@ -114,7 +130,7 @@ const Home = withStyles((theme) => ({
               optimisation/automation, and using VIM.
             </Subtitle>
             <br />
-            <Subtitle className={classes.subtitle}>
+            <Subtitle className={`${classes.subtitle} ${classes.subtitleDelayed}`}>
               Outside of the software world, I have a big passion for rugby (I
               play it myself), love getting down to the beach for a surf,
               keeping up to date with my favorite TV shows, and exploring what

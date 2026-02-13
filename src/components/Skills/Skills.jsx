@@ -9,151 +9,58 @@ const skillsData = [
   {
     title: "languages",
     skills: [
-      {
-        header: "Bash",
-        imgSrc: "static/images/bash.png",
-      },
-      {
-        header: "JavaScript",
-        imgSrc: "static/images/js.png",
-      },
-      {
-        header: "TypeScript",
-        imgSrc: "static/images/ts.png",
-      },
-      {
-        header: "Python",
-        imgSrc: "static/images/python.webp",
-      },
-      {
-        header: "Java",
-        imgSrc: "static/images/java.png",
-      },
-      {
-        header: "Lisp",
-        imgSrc: "static/images/lisp.png",
-      },
-      {
-        header: "Lua",
-        imgSrc: "static/images/lua.png",
-      },
+      { header: "Bash", imgSrc: "static/images/bash.png" },
+      { header: "JavaScript", imgSrc: "static/images/js.png" },
+      { header: "TypeScript", imgSrc: "static/images/ts.png" },
+      { header: "Python", imgSrc: "static/images/python.webp" },
+      { header: "Java", imgSrc: "static/images/java.png" },
+      { header: "Lisp", imgSrc: "static/images/lisp.png" },
+      { header: "Lua", imgSrc: "static/images/lua.png" },
     ],
   },
   {
     title: "libraries",
     skills: [
-      {
-        header: "React",
-        imgSrc: "static/images/react.png",
-      },
-      {
-        header: "Redux",
-        imgSrc: "static/images/redux.png",
-      },
+      { header: "React", imgSrc: "static/images/react.png" },
+      { header: "Redux", imgSrc: "static/images/redux.png" },
       { header: "Next JS", imgSrc: "static/images/nextjs.svg" },
-      {
-        header: "Flask",
-        imgSrc: "static/images/flask.webp",
-      },
-      {
-        header: "Tailwind",
-        imgSrc: "static/images/tailwind.png",
-      },
-      {
-        header: "Jest",
-        imgSrc: "static/images/jest.png",
-      },
-      {
-        header: "Vitest",
-        imgSrc: "static/images/vitest.png",
-      },
-      {
-        header: "Socket.IO",
-        imgSrc: "static/images/socket-io.png",
-      },
-      {
-        header: "MUI",
-        imgSrc: "static/images/mui.png",
-      },
-      {
-        header: "Ramda",
-        imgSrc: "static/images/ramda.svg",
-      },
+      { header: "Flask", imgSrc: "static/images/flask.webp" },
+      { header: "Tailwind", imgSrc: "static/images/tailwind.png" },
+      { header: "Jest", imgSrc: "static/images/jest.png" },
+      { header: "Vitest", imgSrc: "static/images/vitest.png" },
+      { header: "Socket.IO", imgSrc: "static/images/socket-io.png" },
+      { header: "MUI", imgSrc: "static/images/mui.png" },
+      { header: "Ramda", imgSrc: "static/images/ramda.svg" },
     ],
   },
   {
     title: "tools",
     skills: [
-      {
-        header: "Docker",
-        imgSrc: "static/images/docker.webp",
-      },
-      {
-        header: "Node.JS",
-        imgSrc: "static/images/node.png",
-      },
-      {
-        header: "AWS",
-        imgSrc: "static/images/aws.png",
-      },
-      {
-        header: "Azure",
-        imgSrc: "static/images/azure.webp",
-      },
-      {
-        header: "Storybook",
-        imgSrc: "static/images/storybook.png",
-      },
-      {
-        header: "Postman",
-        imgSrc: "static/images/postman.svg",
-      },
-      {
-        header: "SQLite",
-        imgSrc: "static/images/sqlite.png",
-      },
-      {
-        header: "Vim",
-        imgSrc: "static/images/vim.png",
-      },
+      { header: "Docker", imgSrc: "static/images/docker.webp" },
+      { header: "Node.JS", imgSrc: "static/images/node.png" },
+      { header: "AWS", imgSrc: "static/images/aws.png" },
+      { header: "Azure", imgSrc: "static/images/azure.webp" },
+      { header: "Storybook", imgSrc: "static/images/storybook.png" },
+      { header: "Postman", imgSrc: "static/images/postman.svg" },
+      { header: "SQLite", imgSrc: "static/images/sqlite.png" },
+      { header: "Vim", imgSrc: "static/images/vim.png" },
     ],
   },
   {
     title: "concepts",
     skills: [
-      {
-        header: "Clean Code",
-        imgSrc: "static/images/clean-code.jpg",
-      },
-      {
-        header: "Clean Arch",
-        imgSrc: "static/images/clean-arch.jpg",
-      },
-      {
-        header: "DDD",
-        imgSrc: "static/images/ddd.jpg",
-      },
+      { header: "Clean Code", imgSrc: "static/images/clean-code.jpg" },
+      { header: "Clean Arch", imgSrc: "static/images/clean-arch.jpg" },
+      { header: "DDD", imgSrc: "static/images/ddd.jpg" },
     ],
   },
   {
     title: "low code",
     skills: [
-      {
-        header: "Power Automate",
-        imgSrc: "static/images/power-automate.png",
-      },
-      {
-        header: "Power Apps",
-        imgSrc: "static/images/power-apps.webp",
-      },
-      {
-        header: "Dataverse",
-        imgSrc: "static/images/dataverse.png",
-      },
-      {
-        header: "SharePoint",
-        imgSrc: "static/images/sharepoint.png",
-      },
+      { header: "Power Automate", imgSrc: "static/images/power-automate.png" },
+      { header: "Power Apps", imgSrc: "static/images/power-apps.webp" },
+      { header: "Dataverse", imgSrc: "static/images/dataverse.png" },
+      { header: "SharePoint", imgSrc: "static/images/sharepoint.png" },
     ],
   },
 ];
@@ -175,9 +82,30 @@ const Skills = withStyles((theme) => ({
     height: "100%",
     fontWeight: "700",
     fontSize: "1.3rem",
+    position: "relative",
+    color: alpha(theme.palette.secondary.main, 0.6),
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: "0",
+      left: "50%",
+      width: "0",
+      height: "3px",
+      backgroundColor: theme.palette.secondary.main,
+      transform: "translateX(-50%)",
+      transition: "width 0.3s ease",
+      borderRadius: "2px 2px 0 0",
+    },
+
     "&:hover": {
-      color: alpha(theme.palette.secondary.main, 0.5),
+      color: alpha(theme.palette.secondary.main, 0.8),
       cursor: "pointer",
+    },
+
+    "&:hover::after": {
+      width: "60%",
     },
   },
   skills: {
@@ -194,20 +122,31 @@ const Skills = withStyles((theme) => ({
     scrollBehavior: "smooth",
     width: "100%",
     WebkitOverflowScrolling: "touch",
+    animation: "skillsFadeIn 0.4s ease",
   },
   skill: {
     color: theme.palette.secondary.main,
   },
   active: {
+    color: theme.palette.secondary.main,
     borderTop: `4px solid ${theme.palette.secondary.main}`,
     borderRight: `4px solid ${theme.palette.secondary.main}`,
     borderLeft: `4px solid ${theme.palette.secondary.main}`,
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
     backgroundColor: theme.palette.primary.main,
+
+    "&::after": {
+      width: "0",
+    },
+
     "&:hover": {
       color: theme.palette.secondary.main,
       cursor: "default",
+    },
+
+    "&:hover::after": {
+      width: "0",
     },
   },
   hide: {
@@ -255,11 +194,12 @@ const Skills = withStyles((theme) => ({
             activeTab === section.title ? classes.skills : classes.hide
           }
         >
-          {section.skills.map((skill) => (
+          {section.skills.map((skill, index) => (
             <Skill
               key={skill.header}
               imgSrc={skill.imgSrc}
               header={skill.header}
+              index={index}
             />
           ))}
         </div>

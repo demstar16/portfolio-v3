@@ -64,6 +64,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  font-family: "JetBrains Mono", monospace;
 }
 
 /*
@@ -72,4 +73,157 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* =================================
+   SMOOTH ANIMATIONS & TRANSITIONS
+   ================================= */
+
+/* Section reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Subtle glow pulse for borders */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(223, 242, 151, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(223, 242, 151, 0.5);
+  }
+}
+
+/* Stagger animation for child elements */
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal animations */
+@keyframes modalFadeIn {
+  from { background-color: rgba(0, 0, 0, 0); }
+  to { background-color: rgba(0, 0, 0, 0.6); }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Skills fade animation */
+@keyframes skillsFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Text fade animation */
+@keyframes textFadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Global button reset with smooth transitions */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Link underline animation */
+a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Smooth image transitions */
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(223, 242, 151, 0.3);
+  color: #dff297;
+}
+
+/* Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #143D60;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dff297;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(223, 242, 151, 0.8);
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #dff297;
+  outline-offset: 2px;
 }

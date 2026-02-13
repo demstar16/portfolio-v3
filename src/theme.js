@@ -23,8 +23,35 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Rokkitt",
+    fontFamily: '"Rokkitt", serif',
     fontSize: 14,
+    h1: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+    h2: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+    h3: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+    h4: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+    h5: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+    h6: {
+      fontFamily: '"JetBrains Mono", monospace',
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          scrollBehavior: "smooth",
+        },
+      },
+    },
   },
 });
 

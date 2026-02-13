@@ -22,16 +22,22 @@ const SecondaryNavBox = withStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
 
     "&:hover": {
-      border: `4px solid ${alpha(theme.palette.secondary.main, 0.5)}`,
-      color: alpha(theme.palette.secondary.main, 0.5),
+      border: `4px solid ${alpha(theme.palette.secondary.main, 0.7)}`,
+      transform: "translateY(-3px)",
+      boxShadow: `0 8px 25px ${alpha(theme.palette.secondary.main, 0.25)}`,
     },
   },
   "@media (max-width: 768px)": {
     root: {
       padding: "0",
       border: "none",
+      "&:hover": {
+        transform: "scale(1.1)",
+        boxShadow: "none",
+      },
     },
   },
 }))(({ classes, children, href }) => (
@@ -52,6 +58,7 @@ const Navigation = withStyles((theme) => ({
     width: "fit-content",
     zIndex: "99",
     marginLeft: "5%",
+    animation: "fadeInUp 0.6s ease-out",
   },
   navbar: {
     backgroundColor: theme.palette.primary.main,
@@ -62,11 +69,35 @@ const Navigation = withStyles((theme) => ({
     gap: "2rem",
     justifyContent: "space-around",
     padding: "1rem 4rem",
+    backdropFilter: "blur(10px)",
+    transition: "box-shadow 0.3s ease",
+    "&:hover": {
+      boxShadow: `0 4px 20px ${alpha(theme.palette.secondary.main, 0.15)}`,
+    },
+  },
+  navLink: {
+    position: "relative",
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: "-4px",
+      left: "50%",
+      width: "0",
+      height: "2px",
+      backgroundColor: theme.palette.secondary.main,
+      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      transform: "translateX(-50%)",
+    },
+    "&:hover::after": {
+      width: "100%",
+    },
   },
   active: {
     color: theme.palette.secondary.main,
     fontWeight: "700",
-    textDecoration: "underline",
+    "&::after": {
+      width: "100%",
+    },
     "&:hover": {
       cursor: "default",
     },
@@ -74,8 +105,9 @@ const Navigation = withStyles((theme) => ({
   icon: {
     width: "30px",
     maxWidth: "30px",
+    transition: "all 0.3s ease",
     "&:hover": {
-      color: alpha(theme.palette.secondary.main, 0.5),
+      color: alpha(theme.palette.secondary.main, 0.7),
     },
   },
   secondaryNavOptions: {
@@ -85,6 +117,14 @@ const Navigation = withStyles((theme) => ({
   linkWidth: {
     width: "100%",
     textAlign: "center",
+  },
+  favicon: {
+    width: "30px",
+    height: "30px",
+    transition: "transform 0.3s ease",
+    "&:hover": {
+      transform: "rotate(10deg) scale(1.1)",
+    },
   },
   "@media (max-width: 768px)": {
     root: {
@@ -96,6 +136,7 @@ const Navigation = withStyles((theme) => ({
       gap: "0",
       width: "100vw",
       flexDirection: "column",
+      animation: "none",
     },
     navbar: {
       backgroundColor: "inherit",
@@ -116,13 +157,14 @@ const Navigation = withStyles((theme) => ({
   return (
     <div className={classes.root}>
       <nav className={classes.navbar}>
-        <img src="/favicon.ico" style={{ width: "30px", height: "30px" }} />
+        <img src="/favicon.ico" className={classes.favicon} />
         {sections.map((section) => (
           <Link
             key={section}
             href={`#${section}`}
             className={clsx(
               classes.linkWidth,
+              classes.navLink,
               activeSection === section ? classes.active : "",
             )}
           >
