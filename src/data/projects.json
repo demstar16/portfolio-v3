@@ -23,7 +23,7 @@
   },
   {
     "title": "Triumph",
-    "description": "Triumph is a strategic terminal game developed in Python, leveraging matplotlib for dynamic visualisation, NGINX for serving game assets, and Bayesian mathematics to simulate persuasion and belief shifts within a population. Set in a fictional political landscape, players choose to side with either the Government or the Resistance, each aiming to win public support through carefully chosen dialogue and strategic moves. Every interaction influences probabilistic outcomes, with the government wielding tools like surveillance and covert operations. The project blends game theory, narrative design, and statistical modelling into a unique, text-based gameplay experience.",
+    "description": "A strategic terminal game built with Python and matplotlib, using Bayesian mathematics to simulate persuasion and belief shifts. Players side with the Government or the Resistance, shaping public opinion through strategic dialogue where every interaction influences probabilistic outcomes. Blends game theory, narrative design, and statistical modelling into a unique text-based experience.",
     "shortDescription": "Triumph is a CLI political wargame built with Python, and Bayesian modelling, where players shape public opinion through strategic dialogue as either the Government or the Resistance.",
     "techStack": ["python.webp", "numpy.png", "matplotlib.png", "networkx.png"],
     "imgSrc": "static/images/triumph.png",

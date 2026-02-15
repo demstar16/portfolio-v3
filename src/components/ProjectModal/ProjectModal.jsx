@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { alpha } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import clsx from "clsx";
@@ -127,6 +128,13 @@ const ProjectModal = withStyles((theme) => ({
     },
   },
 }))(({ classes, project, setShowModal }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
     <div
       key={project.title}
