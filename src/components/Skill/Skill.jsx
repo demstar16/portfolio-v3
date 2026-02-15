@@ -32,6 +32,7 @@ const Skill = withStyles((theme) => ({
   },
   header: {
     fontWeight: "700",
+    fontSize: "0.85rem",
     textDecoration: "none",
     textAlign: "center",
   },

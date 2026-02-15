@@ -61,6 +61,11 @@ const skillsData = [
       { header: "Power Apps", imgSrc: "static/images/power-apps.webp" },
       { header: "Dataverse", imgSrc: "static/images/dataverse.png" },
       { header: "SharePoint", imgSrc: "static/images/sharepoint.png" },
+      { header: "Power BI", imgSrc: "static/images/powerbi.webp" },
+      { header: "Dataflows", imgSrc: "static/images/dataflows.png" },
+      { header: "Copilot", imgSrc: "static/images/copilot.png" },
+      { header: "Entra", imgSrc: "static/images/entra.png" },
+      { header: "Fabric", imgSrc: "static/images/fabric.png" },
     ],
   },
 ];

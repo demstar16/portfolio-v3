@@ -6,20 +6,24 @@ import Header from "../Header";
 
 const workExperienceData = [
   {
-    company: "JourneyOne",
-    description: `As part of a tight-knit cohort of four, I spent several months under the guidance of a senior software engineer, diving deep into modern software practices and cloud fundamentals. We earned our AWS certifications, explored asynchronous and functional programming in JavaScript (with a healthy dose of Ramda), and developed a Connect4 game using TypeScript, Next.js, Vitest, Storybook, and Turbo—all while adhering to Clean Code, Clean Architecture, and DDD principles. We took test-driven development seriously (thanks, Jest), and also worked through programming fundamentals via Structure and Interpretation of Computer Programs—yes, in Scheme. Weekly lightning talks, book clubs, and a "live in your terminal" mantra (plus a borderline cultish appreciation for vim keybindings) made this experience as enriching as it was efficient. Bonus: I now type faster and with less risk of carpal tunnel.`,
+    company: "Ingentive",
+    date: "Nov 2025 - Present",
+    description: `Working at this London-based Microsoft Inner Circle partner, I delivered an end-to-end Canvas App with an admin Model Driven App component, integrated with Power BI reporting and backed by Dataverse and Power Automate. Designed the security model using Entra ID and Dataverse security principles. Conducted data integrations and migrations into Dataverse via Dataflows, and managed releases through pipelines and environment-aware solutions as part of Application Lifecycle Management (ALM). Beyond development, I gained experience in QA testing, writing test scripts, deployment guides, high-level documentation, project estimations, and running client demonstrations for client adoption.`,
   },
   {
-    company: "Jibility",
-    description: `Following the graduate program, I joined an internal team at JourneyOne working on Jibility, a business roadmapping tool with a seriously well-engineered codebase. Here, I leveled up my JavaScript and functional programming skills, navigated a large pre-existing codebase (lots of "aha!" moments), and gained a real appreciation for a clean Git working tree and the power of a well-written commit. We used MUI for theming (which was surprisingly fun), tackled internationalisation (i18n), and tracked our progress using Jira and StoriesOnBoard. This was also my first real experience with structured code reviews, and learning to work in a mature dev environment gave me insights I still carry today—like how valuable a well-named commit can be to your future self.`,
+    company: "Evergreen Ops",
+    date: "Feb 2025 - Aug 2025",
+    description: `Contracted through Evergreen Ops to Sandfire, a copper mining company, working within the Microsoft Power Platform ecosystem. Supported and enhanced Canvas Power Apps, collaborated with product owners to troubleshoot issues and deliver new features, and built a Model Driven App for an internal project. Deepened my expertise in Power Automate, SharePoint, Dataverse, and Entra ID security practices while strengthening client-facing communication and stakeholder management skills.`,
+  },
+  {
+    company: "JourneyOne",
+    date: "Feb 2024 - Feb 2025",
+    description: `Completed a graduate program under a senior engineer, earning AWS certifications and building projects with TypeScript, Next.js, Vitest, Storybook, and Turbo—grounded in Clean Code, Clean Architecture, and DDD. Practised TDD with Jest, functional programming with Ramda, and worked through SICP in Scheme. Transitioned into Jibility, JourneyOne's business roadmapping product, where I worked across a mature codebase using MUI, i18n, structured code reviews, and tools like Jira and StoriesOnBoard.`,
   },
   {
     company: "GeneS",
-    description: `At GeneS, a bioinformatics-focused startup, I joined a remote team working on the not-so-small task of translating performance-critical Python code into Rust to supercharge data processing efficiency. This involved researching and evaluating Rust libraries suitable for scientific computing, then presenting our findings to guide technical decisions. It was a crash course in systems-level programming, and an even bigger lesson in remote teamwork, clear communication, and adapting quickly to unfamiliar domains. Bioinformatics may have been new to me, but debugging memory-safe code while deciphering gene data made for a uniquely nerdy and rewarding challenge.`,
-  },
-  {
-    company: "Sandfire",
-    description: `I've been sharpening my consulting skills at Sandfire, a copper mining company—quite a shift from software games and roadmaps to rocks and real-world operations. Working in the Microsoft ecosystem, I've been supporting and enhancing Canvas Power Apps, liaising with product owners to troubleshoot issues, roll out new features, and make sure nothing catches fire (and if it does, putting it out quickly). This role has deepened my knowledge of Power Automate, SharePoint, Dataverse, and Entra ID security practices. But just as importantly, it's strengthened my soft skills—like understanding client needs, communicating clearly under pressure, and keeping stakeholders in the loop (even when the answer is "still investigating"). Not as much hands-on dev, but definitely plenty of growth.`,
+    date: "Dec 2021 - Apr 2022",
+    description: `Joined a remote team at this bioinformatics startup to translate performance-critical Python code into Rust for faster data processing. Researched and evaluated Rust libraries for scientific computing and presented findings to guide technical decisions. Gained hands-on systems programming experience while adapting quickly to an unfamiliar domain.`,
   },
 ];
 
@@ -77,11 +81,19 @@ const WorkExperience = withStyles((theme) => ({
       height: "60%",
     },
   },
+  date: {
+    padding: "0.5rem 2rem 0",
+    fontSize: "0.9rem",
+    fontWeight: "600",
+    opacity: 0.7,
+    animation: "textFadeIn 0.4s ease",
+  },
   text: {
-    padding: "0.5rem 2rem",
+    padding: "0.3rem 2rem 0.5rem",
     fontStyle: "italic",
     animation: "textFadeIn 0.4s ease",
     lineHeight: "1.6",
+    fontSize: "1.1rem",
   },
   active: {
     color: theme.palette.secondary.main,
@@ -148,6 +160,7 @@ const WorkExperience = withStyles((theme) => ({
   const [experience, setExperience] = useState(
     workExperienceData[0].description,
   );
+  const [date, setDate] = useState(workExperienceData[0].date);
   const [activeTab, setActiveTab] = useState(workExperienceData[0].company);
 
   return (
@@ -164,6 +177,7 @@ const WorkExperience = withStyles((theme) => ({
               )}
               onClick={() => {
                 setExperience(workExperience.description);
+                setDate(workExperience.date);
                 setActiveTab(workExperience.company);
               }}
             >
@@ -171,8 +185,9 @@ const WorkExperience = withStyles((theme) => ({
             </button>
           ))}
         </div>
-        <div key={activeTab} className={classes.text}>
-          {experience}
+        <div key={activeTab}>
+          <div className={classes.date}>{date}</div>
+          <div className={classes.text}>{experience}</div>
         </div>
       </div>
     </div>
