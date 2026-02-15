@@ -17,6 +17,7 @@
       "react.png",
       "emotion.png"
     ],
+    "tags": ["JavaScript", "Node.js", "Next.js", "React", "MongoDB", "AWS"],
     "imgSrc": "static/images/cewa-calc.png",
     "repository": "",
     "demo": "https://calculator.cleaningequipmentwa.com.au"
@@ -26,6 +27,7 @@
     "description": "A strategic terminal game built with Python and matplotlib, using Bayesian mathematics to simulate persuasion and belief shifts. Players side with the Government or the Resistance, shaping public opinion through strategic dialogue where every interaction influences probabilistic outcomes. Blends game theory, narrative design, and statistical modelling into a unique text-based experience.",
     "shortDescription": "Triumph is a CLI political wargame built with Python, and Bayesian modelling, where players shape public opinion through strategic dialogue as either the Government or the Resistance.",
     "techStack": ["python.webp", "numpy.png", "matplotlib.png", "networkx.png"],
+    "tags": ["Python"],
     "imgSrc": "static/images/triumph.png",
     "repository": "https://github.com/demstar16/triumph",
     "demo": ""
@@ -35,6 +37,7 @@
     "description": "Web game where players listen to a short clip and guess which Adam Sandler movie it’s from. Built with Flask, Python, and JavaScript, the game uses cookies and local storage to track user progress and enforce daily challenge limits. It blends nostalgia with logic, offering a surprisingly strategic experience for anyone who’s seen Happy Gilmore one too many times.",
     "shortDescription": "A wordle clone created with Flask where you have to guess which movie an Adam Sandler movie audio clip is from.",
     "techStack": ["python.webp", "flask.webp", "js.png"],
+    "tags": ["Python", "Flask", "JavaScript"],
     "imgSrc": "static/images/adam-sandler.png",
     "repository": "https://github.com/demstar16/adam-sandler-audio-wordle",
     "demo": "https://adam-sandler-audio-wordle.onrender.com/"
@@ -44,6 +47,7 @@
     "description": "A collection of Javascript, Ramda, and Redux functions re-created under Test-Driven Development principles during my time in the JourneyOne Graduate Program. This was a great approach for learning TDD, the functions themselves, good test coverage, working backwards, and a unique but effective way of thinking and development.",
     "shortDescription": "A collection of functions created under test, for learning both TDD and complex functions in-depth.",
     "techStack": ["jest.png", "js.png", "ts.png", "ramda.svg", "redux.png"],
+    "tags": ["JavaScript", "TypeScript"],
     "imgSrc": "static/images/tdd.png",
     "repository": "https://github.com/demstar16/tdd-modules",
     "demo": ""
@@ -53,6 +57,7 @@
     "description": "A static portfolio site built with React, MUI, and Vite to showcase who I am, projects I've worked on, my work experience, and links to other technical resources/profiles I have.",
     "shortDescription": "A static portfolio site built with React, MUI, and Vite to showcase my work.",
     "techStack": ["react.png", "js.png", "mui.png", "vite.png"],
+    "tags": ["React", "JavaScript", "MUI", "Vite"],
     "imgSrc": "static/images/portfolio.png",
     "repository": "https://github.com/demstar16/portfolio-v3",
     "demo": ""
@@ -70,6 +75,7 @@
       "storybook.png",
       "aws.png"
     ],
+    "tags": ["TypeScript", "React", "Next.js", "AWS", "Storybook"],
     "imgSrc": "static/images/connect4-game.png",
     "repository": "https://github.com/dempseyt/connect4",
     "demo": ""
@@ -79,6 +85,7 @@
     "description": "Project Kickstart is a command-line tool built with JavaScript that streamlines the creation of new projects by scaffolding boilerplate code and auto-configuring essential .dotfiles. Designed to save time and eliminate repetitive setup tasks, it handles everything from folder structure to initial config for tools like ESLint, Prettier, and Git—so you can jump straight into writing code instead of setting it up.",
     "shortDescription": "CLI tool to kickstart projects, avoiding initial set up and config hassles.",
     "techStack": ["js.png"],
+    "tags": ["JavaScript"],
     "imgSrc": "static/images/template-cli.png",
     "repository": "https://github.com/demstar16/template-cli",
     "demo": ""

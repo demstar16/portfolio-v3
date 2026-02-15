@@ -13,6 +13,7 @@ const Wrapper = withStyles(() => ({
     paddingTop: "90px",
     paddingBottom: "90px",
     boxSizing: "border-box",
+    scrollMarginTop: "80px",
   },
   animated: {
     opacity: 0,

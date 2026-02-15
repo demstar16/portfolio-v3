@@ -25,6 +25,8 @@ const ProjectModal = withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "60%",
+    maxHeight: "90vh",
+    overflowY: "auto",
     padding: "2rem 5rem",
     borderRadius: "10px",
     backgroundColor: "rgb(50, 88, 122)",
@@ -124,6 +126,7 @@ const ProjectModal = withStyles((theme) => ({
   "@media (max-width: 768px)": {
     root: {
       width: "90%",
+      maxHeight: "85vh",
       padding: "1rem",
     },
   },
