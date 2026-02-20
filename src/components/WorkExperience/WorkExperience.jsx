@@ -8,22 +8,22 @@ const workExperienceData = [
   {
     company: "Ingentive",
     date: "Nov 2025 - Present",
-    description: `Working at this London-based Microsoft Inner Circle partner, I delivered an end-to-end Canvas App with an admin Model Driven App component, integrated with Power BI reporting and backed by Dataverse and Power Automate. Designed the security model using Entra ID and Dataverse security principles. Conducted data integrations and migrations into Dataverse via Dataflows, and managed releases through pipelines and environment-aware solutions as part of Application Lifecycle Management (ALM). Beyond development, I gained experience in QA testing, writing test scripts, deployment guides, high-level documentation, project estimations, and running client demonstrations for client adoption.`,
+    description: `At Ingentive, a London-based Microsoft Inner Circle partner, I delivered an end-to-end Canvas App with an admin Model Driven App component, integrated with Power BI reporting and backed by Dataverse and Power Automate. Designed the security model using Entra ID and Dataverse security principles. Conducted data integrations and migrations into Dataverse via Dataflows, and managed releases through pipelines and environment-aware solutions as part of Application Lifecycle Management (ALM). Beyond development, I contributed to QA testing, test script authoring, deployment guides, high-level documentation, project estimations, and client demonstrations to support adoption.`,
   },
   {
     company: "Evergreen Ops",
     date: "Feb 2025 - Aug 2025",
-    description: `Contracted through Evergreen Ops to Sandfire, a copper mining company, working within the Microsoft Power Platform ecosystem. Supported and enhanced Canvas Power Apps, collaborated with product owners to troubleshoot issues and deliver new features, and built a Model Driven App for an internal project. Deepened my expertise in Power Automate, SharePoint, Dataverse, and Entra ID security practices while strengthening client-facing communication and stakeholder management skills.`,
+    description: `Contracted through Evergreen Ops to Sandfire, a copper mining company, working within the Microsoft Power Platform ecosystem. Supported and enhanced Canvas Power Apps, collaborated with product owners to troubleshoot issues and deliver new features, and developed a Model Driven App for an internal project. Deepened expertise in Power Automate, SharePoint, Dataverse, and Entra ID security practices while strengthening client-facing communication and stakeholder management skills.`,
   },
   {
     company: "JourneyOne",
     date: "Feb 2024 - Feb 2025",
-    description: `Completed a graduate program under a senior engineer, earning AWS certifications and building projects with TypeScript, Next.js, Vitest, Storybook, and Turbo—grounded in Clean Code, Clean Architecture, and DDD. Practised TDD with Jest, functional programming with Ramda, and worked through SICP in Scheme. Transitioned into Jibility, JourneyOne's business roadmapping product, where I worked across a mature codebase using MUI, i18n, structured code reviews, and tools like Jira and StoriesOnBoard.`,
+    description: `Completed a graduate program under the mentorship of a senior engineer, earning AWS certifications and building projects with TypeScript, Next.js, Vitest, Storybook, and Turbo—grounded in Clean Code, Clean Architecture, and DDD principles. Practised TDD with Jest, functional programming with Ramda, and worked through SICP in Scheme. Transitioned into Jibility, JourneyOne's business roadmapping product, contributing across a mature codebase using MUI, i18n, structured code reviews, and tools like Jira and StoriesOnBoard.`,
   },
   {
     company: "GeneS",
     date: "Dec 2021 - Apr 2022",
-    description: `Joined a remote team at this bioinformatics startup to translate performance-critical Python code into Rust for faster data processing. Researched and evaluated Rust libraries for scientific computing and presented findings to guide technical decisions. Gained hands-on systems programming experience while adapting quickly to an unfamiliar domain.`,
+    description: `Joined a remote team at GeneS, a bioinformatics startup, to translate performance-critical Python code into Rust for faster data processing. Researched and evaluated Rust libraries for scientific computing and presented findings to guide technical decisions. Gained hands-on systems programming experience while adapting to an unfamiliar domain.`,
   },
 ];
 
