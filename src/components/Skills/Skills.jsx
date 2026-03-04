@@ -15,6 +15,7 @@ const skillsData = [
       { header: "Python", imgSrc: "static/images/python.webp" },
       { header: "Java", imgSrc: "static/images/java.png" },
       { header: "Lisp", imgSrc: "static/images/lisp.png" },
+      { header: "Swift", imgSrc: "static/images/swift.png" },
       { header: "Lua", imgSrc: "static/images/lua.png" },
     ],
   },
@@ -44,6 +45,8 @@ const skillsData = [
       { header: "Postman", imgSrc: "static/images/postman.svg" },
       { header: "SQLite", imgSrc: "static/images/sqlite.png" },
       { header: "Vim", imgSrc: "static/images/vim.png" },
+      { header: "Azure DevOps", imgSrc: "static/images/devops.webp" },
+      { header: "Jira", imgSrc: "static/images/jira.png" },
     ],
   },
   {

@@ -68,8 +68,8 @@ const Home = withStyles((theme) => ({
   },
   image: {
     borderRadius: "20px",
-    maxHeight: "25rem",
-    maxWidth: "25rem",
+    maxHeight: "30rem",
+    maxWidth: "30rem",
     animation: "slideInRight 0.6s ease-out",
     transition: "transform 0.4s ease, box-shadow 0.4s ease",
     "&:hover": {
@@ -130,7 +130,9 @@ const Home = withStyles((theme) => ({
               optimisation/automation, and using VIM.
             </Subtitle>
             <br />
-            <Subtitle className={`${classes.subtitle} ${classes.subtitleDelayed}`}>
+            <Subtitle
+              className={`${classes.subtitle} ${classes.subtitleDelayed}`}
+            >
               Outside of the software world, I have a big passion for rugby (I
               play it myself), love getting down to the beach for a surf,
               keeping up to date with my favorite TV shows, and exploring what
@@ -138,7 +140,7 @@ const Home = withStyles((theme) => ({
             </Subtitle>
           </div>
           <img
-            src="static/images/profile-pic.png"
+            src="static/images/profile-pic.jpg"
             alt="Profile"
             className={classes.image}
           />
