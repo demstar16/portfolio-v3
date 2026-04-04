@@ -23,6 +23,16 @@
     "demo": "https://calculator.cleaningequipmentwa.com.au"
   },
   {
+    "title": "Curated By V",
+    "description": "A website created for a client who specialises in cocktail catering services in perth. My first freelancing project, it was a very exciting and rewarding experience to create software that had instant impact with a customer.",
+    "shortDescription": "A website created for a client who specialises in cocktail catering services in perth. Built with Vite, React, and TypeScript.",
+    "techStack": ["vite.png", "react.png", "ts.png"],
+    "tags": ["React", "TypeScript", "Vite"],
+    "imgSrc": "static/images/curated_by_v-project.png",
+    "repository": "",
+    "demo": "https://curatedbyv.com.au/"
+  },
+  {
     "title": "Triumph",
     "description": "A strategic terminal game built with Python and matplotlib, using Bayesian mathematics to simulate persuasion and belief shifts. Players side with the Government or the Resistance, shaping public opinion through strategic dialogue where every interaction influences probabilistic outcomes. Blends game theory, narrative design, and statistical modelling into a unique text-based experience.",
     "shortDescription": "Triumph is a CLI political wargame built with Python, and Bayesian modelling, where players shape public opinion through strategic dialogue as either the Government or the Resistance.",
