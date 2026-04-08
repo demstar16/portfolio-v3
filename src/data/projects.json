@@ -23,6 +23,16 @@
     "demo": "https://calculator.cleaningequipmentwa.com.au"
   },
   {
+    "title": "CEWA Website",
+    "description": "A static website for a family run business that sells commercial cleaning equipment and offers specialised repairs. Built with Vite, React, and TypeScript.",
+    "shortDescription": "A static website for a family run business that sells commercial cleaning equipment and offers specialised repairs. Built with Vite, React, and TypeScript.",
+    "techStack": ["vite.png", "react.png", "ts.png", "storybook.png"],
+    "tags": ["React", "TypeScript", "Vite", "Storybook"],
+    "imgSrc": "static/images/cewa-site.png",
+    "repository": "",
+    "demo": "https://cewa-site.vercel.app/"
+  },
+  {
     "title": "Curated By V",
     "description": "A website created for a client who specialises in cocktail catering services in perth. My first freelancing project, it was a very exciting and rewarding experience to create software that had instant impact with a customer.",
     "shortDescription": "A website created for a client who specialises in cocktail catering services in perth. Built with Vite, React, and TypeScript.",
