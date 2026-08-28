@@ -1,25 +1,25 @@
 import { createTheme } from "@mui/material/styles";
 
-// https://colorhunt.co/palette/ddeb9da0c87827667b143d60
+// Deep space palette: dark navy blue + neon aqua-green
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#143D60",
+      main: "#0A1128",
     },
     secondary: {
-      main: "#dff297",
+      main: "#39FFC5",
     },
     background: {
-      default: "#143D60",
+      default: "#0A1128",
     },
     text: {
-      primary: "#dff297",
+      primary: "#39FFC5",
     },
     colors: {
       black: "#000",
       white: "#fff",
-      lightBlue: "#3257A",
+      lightBlue: "#16234A",
     },
   },
   typography: {

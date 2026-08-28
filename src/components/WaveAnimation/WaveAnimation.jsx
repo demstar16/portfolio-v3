@@ -55,8 +55,8 @@ const WaveAnimation = () => (
 
     <defs>
       <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-        <stop offset="5%" stopColor="#143d60" />
-        <stop offset="95%" stopColor="#dff297" />
+        <stop offset="5%" stopColor="#0A1128" />
+        <stop offset="95%" stopColor="#39FFC5" />
       </linearGradient>
     </defs>
 

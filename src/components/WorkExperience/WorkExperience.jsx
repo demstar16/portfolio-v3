@@ -7,18 +7,38 @@ import Header from "../Header";
 const workExperienceData = [
   {
     company: "Ingentive",
-    date: "Nov 2025 - Present",
+    date: "Nov 2025 - May 2026",
     description: `At Ingentive, a London-based Microsoft Inner Circle partner, I delivered an end-to-end Canvas App with an admin Model Driven App component, integrated with Power BI reporting and backed by Dataverse and Power Automate. Designed the security model using Entra ID and Dataverse security principles. Conducted data integrations and migrations into Dataverse via Dataflows, and managed releases through pipelines and environment-aware solutions as part of Application Lifecycle Management (ALM). Beyond development, I contributed to QA testing, test script authoring, deployment guides, high-level documentation, project estimations, and client demonstrations to support adoption.`,
   },
   {
-    company: "Evergreen Ops",
+    company: "EvergreenOps",
     date: "Feb 2025 - Aug 2025",
-    description: `Contracted through Evergreen Ops to Sandfire, a copper mining company, working within the Microsoft Power Platform ecosystem. Supported and enhanced Canvas Power Apps, collaborated with product owners to troubleshoot issues and deliver new features, and developed a Model Driven App for an internal project. Deepened expertise in Power Automate, SharePoint, Dataverse, and Entra ID security practices while strengthening client-facing communication and stakeholder management skills.`,
+    description: `Contracted through EvergreenOps to Sandfire, a copper mining company, working within the Microsoft Power Platform ecosystem. Supported and enhanced Canvas Power Apps, collaborated with product owners to troubleshoot issues and deliver new features, and developed a Model Driven App for an internal project. Deepened expertise in Power Automate, SharePoint, Dataverse, and Entra ID security practices while strengthening client-facing communication and stakeholder management skills.`,
   },
   {
     company: "JourneyOne",
-    date: "Feb 2024 - Feb 2025",
-    description: `Completed a graduate program under the mentorship of a senior engineer, earning AWS certifications and building projects with TypeScript, Next.js, Vitest, Storybook, and Turbo—grounded in Clean Code, Clean Architecture, and DDD principles. Practised TDD with Jest, functional programming with Ramda, and worked through SICP in Scheme. Transitioned into Jibility, JourneyOne's business roadmapping product, contributing across a mature codebase using MUI, i18n, structured code reviews, and tools like Jira and StoriesOnBoard.`,
+    subExperiences: [
+      {
+        title: "Graduate Program",
+        date: "Feb 2024 - Nov 2024",
+        description: `An intensive graduate program where I studied SICP with Scheme (from the textbook), Clean Code, Clean Architecture, and Domain Driven Design, and delivered lightning talks on topics I'd researched myself. Went deep on JavaScript, Bash, Vim, Linux, Webpack, and CSS, picked up functional programming with Ramda, and built a strong foundation in Test Driven Development — skills I still lean on daily.`,
+      },
+      {
+        title: "Jibility",
+        date: "Nov 2024 - Feb 2025",
+        description: `Shipped a couple of features inside a genuinely well-engineered, functional-first codebase built with Ramda. Rolled out i18n support across the product and led a restyle and re-theme using MUI, getting hands-on with the discipline that comes with maintaining a mature codebase at scale.`,
+      },
+      {
+        title: "Sandfire",
+        date: "Jun 2026 - Jul 2026",
+        description: `Led a more ambitious AI initiative for Sandfire, designing and building three proof-of-concept agents across Agent Builder, Copilot Studio, and Microsoft Foundry to explore what agentic AI could do for their business, and provide the most value. It was really rewarding to spin up these PoC's in such a short time and see the genuine curiosity and excitement from the stakeholders as to what these agents can do for them.`,
+      },
+      {
+        title: "CSIRO",
+        date: "Aug 2026 - Sep 2026",
+        description: `Engineered cost and budgeting controls for CSIRO's quantum computing AWS Hub, giving them tighter governance and security over a genuinely cutting-edge workload. Worked hands-on with Landing Zone Accelerator, DynamoDB, S3, AWS Braket, Lambda, API Gateway, Control Tower, and Cognito to get there.`,
+      },
+    ],
   },
   {
     company: "GeneS",
@@ -31,6 +51,8 @@ const WorkExperience = withStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    flex: "1",
+    minWidth: 0,
     backgroundColor: theme.palette.primary.main,
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
@@ -42,6 +64,8 @@ const WorkExperience = withStyles((theme) => ({
   },
   experience: {
     display: "flex",
+    height: "22rem",
+    minHeight: 0,
   },
   buttons: {
     display: "flex",
@@ -49,6 +73,50 @@ const WorkExperience = withStyles((theme) => ({
     alignItems: "flex-start",
     borderRight: `2px solid ${alpha(theme.palette.secondary.main, 0.2)}`,
     paddingRight: "0.5rem",
+    overflowY: "auto",
+    scrollbarGutter: "stable",
+    minHeight: 0,
+  },
+  buttonGroup: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    width: "100%",
+  },
+  subButtons: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    width: "100%",
+    animation: "staggerFadeIn 0.3s ease",
+  },
+  subButton: {
+    width: "11rem",
+    whiteSpace: "nowrap",
+    textAlign: "left",
+    padding: "0.5rem 1rem 0.5rem 2rem",
+    cursor: "pointer",
+    fontSize: "0.9rem",
+    opacity: 0.7,
+    borderRadius: "6px 0 0 6px",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+
+    "&:hover": {
+      opacity: 1,
+      backgroundColor: alpha(theme.palette.secondary.main, 0.05),
+    },
+  },
+  subActive: {
+    color: theme.palette.secondary.main,
+    fontWeight: "700",
+    opacity: 1,
+    cursor: "auto",
+    backgroundColor: alpha(theme.palette.secondary.main, 0.08),
+
+    "&:hover": {
+      color: theme.palette.secondary.main,
+      backgroundColor: alpha(theme.palette.secondary.main, 0.08),
+    },
   },
   button: {
     width: "10rem",
@@ -80,6 +148,13 @@ const WorkExperience = withStyles((theme) => ({
     "&:hover::before": {
       height: "60%",
     },
+  },
+  content: {
+    flex: "1",
+    minWidth: 0,
+    minHeight: 0,
+    overflowY: "auto",
+    scrollbarGutter: "stable",
   },
   date: {
     padding: "0.5rem 2rem 0",
@@ -114,7 +189,7 @@ const WorkExperience = withStyles((theme) => ({
     root: {
       border: `2px solid ${theme.palette.secondary.main}`,
     },
-    experience: { flexDirection: "column" },
+    experience: { flexDirection: "column", height: "26rem" },
     buttons: {
       flexDirection: "row",
       borderRight: "none",
@@ -122,6 +197,15 @@ const WorkExperience = withStyles((theme) => ({
       paddingRight: "0",
       paddingBottom: "0.5rem",
       overflowX: "auto",
+      WebkitOverflowScrolling: "touch",
+    },
+    buttonGroup: {
+      width: "auto",
+    },
+    subButton: {
+      width: "auto",
+      textAlign: "center",
+      padding: "0.4rem 0.8rem",
     },
     button: {
       textAlign: "center",
@@ -157,11 +241,19 @@ const WorkExperience = withStyles((theme) => ({
     },
   },
 }))(({ classes }) => {
-  const [experience, setExperience] = useState(
-    workExperienceData[0].description,
+  const [activeCompany, setActiveCompany] = useState(
+    workExperienceData[0].company,
   );
-  const [date, setDate] = useState(workExperienceData[0].date);
-  const [activeTab, setActiveTab] = useState(workExperienceData[0].company);
+  const [activeSub, setActiveSub] = useState(
+    workExperienceData[0].subExperiences?.[0].title ?? null,
+  );
+
+  const activeCompanyData = workExperienceData.find(
+    (workExperience) => workExperience.company === activeCompany,
+  );
+  const { date, description } = activeCompanyData.subExperiences
+    ? activeCompanyData.subExperiences.find((sub) => sub.title === activeSub)
+    : activeCompanyData;
 
   return (
     <div className={classes.root}>
@@ -169,25 +261,46 @@ const WorkExperience = withStyles((theme) => ({
       <div className={classes.experience}>
         <div className={classes.buttons}>
           {workExperienceData.map((workExperience) => (
-            <button
-              key={workExperience.company}
-              className={clsx(
-                classes.button,
-                activeTab === workExperience.company ? classes.active : {},
-              )}
-              onClick={() => {
-                setExperience(workExperience.description);
-                setDate(workExperience.date);
-                setActiveTab(workExperience.company);
-              }}
-            >
-              {workExperience.company}
-            </button>
+            <div key={workExperience.company} className={classes.buttonGroup}>
+              <button
+                className={clsx(
+                  classes.button,
+                  activeCompany === workExperience.company
+                    ? classes.active
+                    : {},
+                )}
+                onClick={() => {
+                  setActiveCompany(workExperience.company);
+                  setActiveSub(
+                    workExperience.subExperiences?.[0].title ?? null,
+                  );
+                }}
+              >
+                {workExperience.company}
+              </button>
+              {workExperience.subExperiences &&
+                activeCompany === workExperience.company && (
+                  <div className={classes.subButtons}>
+                    {workExperience.subExperiences.map((sub) => (
+                      <button
+                        key={sub.title}
+                        className={clsx(
+                          classes.subButton,
+                          activeSub === sub.title ? classes.subActive : {},
+                        )}
+                        onClick={() => setActiveSub(sub.title)}
+                      >
+                        {sub.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+            </div>
           ))}
         </div>
-        <div key={activeTab}>
+        <div key={`${activeCompany}-${activeSub}`} className={classes.content}>
           <div className={classes.date}>{date}</div>
-          <div className={classes.text}>{experience}</div>
+          <div className={classes.text}>{description}</div>
         </div>
       </div>
     </div>

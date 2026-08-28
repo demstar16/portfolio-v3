@@ -29,7 +29,7 @@ const ProjectModal = withStyles((theme) => ({
     overflowY: "auto",
     padding: "2rem 5rem",
     borderRadius: "10px",
-    backgroundColor: "rgb(50, 88, 122)",
+    backgroundColor: theme.palette.colors.lightBlue,
     border: `4px solid ${theme.palette.secondary.main}`,
     zIndex: 9999,
     animation: "modalSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1)",

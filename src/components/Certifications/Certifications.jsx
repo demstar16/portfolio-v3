@@ -22,7 +22,7 @@ const Certifications = withStyles((theme) => ({
     cursor: "pointer",
     "&:hover": {
       transform: "scale(1.1) rotate(3deg)",
-      filter: "drop-shadow(0 8px 15px rgba(223, 242, 151, 0.3))",
+      filter: `drop-shadow(0 8px 15px ${alpha(theme.palette.secondary.main, 0.3)})`,
     },
   },
   badgeWrapper: {

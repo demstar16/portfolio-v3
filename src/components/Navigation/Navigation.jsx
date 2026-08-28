@@ -40,8 +40,8 @@ const SecondaryNavBox = withStyles((theme) => ({
       },
     },
   },
-}))(({ classes, children, href }) => (
-  <a target="_blank" href={href}>
+}))(({ classes, children, href, newTab = true }) => (
+  <a {...(newTab ? { target: "_blank" } : {})} href={href}>
     <div className={classes.root}>{children}</div>
   </a>
 ));
@@ -65,10 +65,12 @@ const Navigation = withStyles((theme) => ({
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: "10px",
     width: "100%",
+    height: "70px",
     display: "flex",
+    alignItems: "center",
     gap: "2rem",
     justifyContent: "space-around",
-    padding: "1rem 4rem",
+    padding: "0 4rem",
     backdropFilter: "blur(10px)",
     transition: "box-shadow 0.3s ease",
     "&:hover": {
@@ -118,9 +120,10 @@ const Navigation = withStyles((theme) => ({
     width: "100%",
     textAlign: "center",
   },
-  favicon: {
-    width: "30px",
-    height: "30px",
+  logo: {
+    width: "3.75rem",
+    height: "3.75rem",
+    flexShrink: 0,
     transition: "transform 0.3s ease",
     "&:hover": {
       transform: "rotate(10deg) scale(1.1)",
@@ -129,7 +132,7 @@ const Navigation = withStyles((theme) => ({
   "@media (max-width: 768px)": {
     root: {
       backgroundColor: theme.palette.primary.main,
-      border: `2px solid ${theme.palette.secondary.main}`,
+      border: "none",
       position: "sticky",
       margin: "0",
       fontSize: "1rem",
@@ -141,10 +144,23 @@ const Navigation = withStyles((theme) => ({
     navbar: {
       backgroundColor: "inherit",
       border: "none",
+      height: "auto",
       padding: "0.5rem 1rem",
+      "&:hover": {
+        boxShadow: "none",
+      },
+    },
+    navLink: {
+      "&::after": {
+        display: "none",
+      },
     },
     icon: {
       maxWidth: "1rem",
+    },
+    logo: {
+      width: "2rem",
+      height: "2rem",
     },
     secondaryNavOptions: {
       paddingBottom: "1rem",
@@ -157,7 +173,7 @@ const Navigation = withStyles((theme) => ({
   return (
     <div className={classes.root}>
       <nav className={classes.navbar}>
-        <img src="/favicon.ico" className={classes.favicon} />
+        <img src="static/images/portfolio-icon.png" className={classes.logo} />
         {sections.map((section) => (
           <Link
             key={section}
@@ -173,7 +189,7 @@ const Navigation = withStyles((theme) => ({
         ))}
       </nav>
       <div className={classes.secondaryNavOptions}>
-        <SecondaryNavBox href="https://notes.d-sons.com">
+        <SecondaryNavBox href="https://notes.d-sons.com" newTab={false}>
           <Notes className={classes.icon} />
         </SecondaryNavBox>
         <SecondaryNavBox href="https://www.linkedin.com/in/dempsey-thompson-b91614197/">

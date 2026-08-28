@@ -60,7 +60,7 @@ const Home = withStyles((theme) => ({
   },
   subtitle: {
     textAlign: "start",
-    fontSize: "1.4rem",
+    fontSize: "1rem",
     animation: "fadeInUp 0.6s ease-out 0.2s backwards",
   },
   subtitleDelayed: {
@@ -122,25 +122,30 @@ const Home = withStyles((theme) => ({
           <div className={classes.about}>
             <Header className={classes.header}>Dempsey Thompson</Header>
             <Subtitle className={classes.subtitle}>
-              I like to think of myself as a software engineer however I've been
-              doing a lot more low-code stuff with work as of late. I am still
-              passionate for software, mainly working on full-stack application
-              projects in my spare time using predominantly JavaScript, React,
-              and AWS. Outside of this I enjoy bash scripting, work
-              optimisation/automation, and using VIM.
+              I&apos;m a passionate software engineer, with a diverse range of
+              skills including full-stack development, cloud computing,
+              scripting, agentic development and low-code development within the
+              Microsoft stack. I&apos;ve had experience working in London with
+              the Power Platform and gained a lot from that experience, however
+              most of my more recent activity has been in the AWS space
+              developing applications. I&apos;m currently trying to pick up C++,
+              game development with Godot4, and 3D rendering and modelling with
+              Three.js and Blender.
             </Subtitle>
             <br />
             <Subtitle
               className={`${classes.subtitle} ${classes.subtitleDelayed}`}
             >
-              Outside of the software world, I have a big passion for rugby (I
-              play it myself), love getting down to the beach for a surf,
-              keeping up to date with my favorite TV shows, and exploring what
-              life has to offer.
+              Away from software I play rugby, currently pursuing it in Sydney.
+              Given that I spend a lot of my time in the gym, on the field, or
+              recovering. In the moments where I&apos;m not, I enjoy reading a
+              broad range of genres (predominantly fantasy and sci-fi... break
+              the chains), going for a surf, and spending time with friends and
+              family.
             </Subtitle>
           </div>
           <img
-            src="static/images/profile-pic.jpg"
+            src="static/images/portfolio-profile.png"
             alt="Profile"
             className={classes.image}
           />

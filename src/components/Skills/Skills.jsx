@@ -17,6 +17,7 @@ const skillsData = [
       { header: "Lisp", imgSrc: "static/images/lisp.png" },
       { header: "Swift", imgSrc: "static/images/swift.png" },
       { header: "Lua", imgSrc: "static/images/lua.png" },
+      { header: "C++", imgSrc: "static/images/cpp.webp" },
     ],
   },
   {
@@ -32,6 +33,7 @@ const skillsData = [
       { header: "Socket.IO", imgSrc: "static/images/socket-io.png" },
       { header: "MUI", imgSrc: "static/images/mui.png" },
       { header: "Ramda", imgSrc: "static/images/ramda.svg" },
+      { header: "Three.js", imgSrc: "static/images/3js.webp" },
     ],
   },
   {
@@ -47,14 +49,8 @@ const skillsData = [
       { header: "Vim", imgSrc: "static/images/vim.png" },
       { header: "Azure DevOps", imgSrc: "static/images/devops.webp" },
       { header: "Jira", imgSrc: "static/images/jira.png" },
-    ],
-  },
-  {
-    title: "concepts",
-    skills: [
-      { header: "Clean Code", imgSrc: "static/images/clean-code.jpg" },
-      { header: "Clean Arch", imgSrc: "static/images/clean-arch.jpg" },
-      { header: "DDD", imgSrc: "static/images/ddd.jpg" },
+      { header: "Blender", imgSrc: "static/images/blender.webp" },
+      { header: "Godot", imgSrc: "static/images/gotdot4.svg" },
     ],
   },
   {
@@ -69,6 +65,7 @@ const skillsData = [
       { header: "Copilot", imgSrc: "static/images/copilot.png" },
       { header: "Entra", imgSrc: "static/images/entra.png" },
       { header: "Fabric", imgSrc: "static/images/fabric.png" },
+      { header: "AI Foundry", imgSrc: "static/images/microsoft-foundry.webp" },
     ],
   },
 ];

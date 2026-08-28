@@ -15,6 +15,7 @@ const Experience = withStyles(() => ({
   verticalDivider: {
     display: "flex",
     gap: "1rem",
+    width: "100%",
     maxWidth: "100%",
     alignItems: "stretch",
   },
