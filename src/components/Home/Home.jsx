@@ -58,6 +58,14 @@ const Home = withStyles((theme) => ({
     fontSize: "3rem",
     animation: "slideInLeft 0.6s ease-out",
   },
+  tagline: {
+    textAlign: "start",
+    fontSize: "1rem",
+    fontWeight: "500",
+    color: alpha("#8FB4E8", 0.75),
+    margin: "0.05rem 0 0.8rem",
+    animation: "fadeInUp 0.6s ease-out 0.1s backwards",
+  },
   subtitle: {
     textAlign: "start",
     fontSize: "1rem",
@@ -92,6 +100,9 @@ const Home = withStyles((theme) => ({
     header: {
       fontSize: "1.5rem",
     },
+    tagline: {
+      fontSize: "0.8rem",
+    },
     subtitle: {
       fontSize: "0.8rem",
     },
@@ -121,6 +132,11 @@ const Home = withStyles((theme) => ({
         <div className={classes.infoContainer}>
           <div className={classes.about}>
             <Header className={classes.header}>Dempsey Thompson</Header>
+            <p className={classes.tagline}>
+              Bachelor of Science (Computer Science &amp; Software
+              Engineering) &middot; Australian Citizen &middot; Based in
+              Sydney
+            </p>
             <Subtitle className={classes.subtitle}>
               I&apos;m a passionate software engineer, with a diverse range of
               skills including full-stack development, cloud computing,
