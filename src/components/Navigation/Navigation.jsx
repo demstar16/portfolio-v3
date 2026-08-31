@@ -70,7 +70,7 @@ const Navigation = withStyles((theme) => ({
     alignItems: "center",
     gap: "2rem",
     justifyContent: "space-around",
-    padding: "0 4rem",
+    padding: "0 1.5rem 0 1rem",
     backdropFilter: "blur(10px)",
     transition: "box-shadow 0.3s ease",
     "&:hover": {
