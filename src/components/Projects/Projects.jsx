@@ -10,6 +10,7 @@ import Notes from "../../icons/Notes";
 import projectData from "../../data/projects.json";
 
 const NOTES_CALLOUT_KEY = "notesCalloutDismissed";
+const PROJECTS_PER_PAGE = 6;
 
 const allTags = [
   ...new Set(projectData.flatMap((p) => p.tags)),
@@ -100,7 +101,7 @@ const Projects = withStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     gap: "0.5rem",
-    marginBottom: "1rem",
+    marginBottom: "0.5rem",
     width: "100%",
   },
   tag: {
@@ -133,13 +134,69 @@ const Projects = withStyles((theme) => ({
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "1.5rem",
     width: "100%",
-    height: "70vh",
-    overflowY: "auto",
-    overflowX: "hidden",
     padding: "1rem",
   },
   projectWrapper: {
     animation: "fadeInUp 0.5s ease backwards",
+  },
+  projectPlaceholder: {
+    width: "100%",
+    aspectRatio: "16 / 8.55",
+    visibility: "hidden",
+  },
+  pagination: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "0.5rem",
+    marginTop: "0.5rem",
+    width: "100%",
+  },
+  pageButton: {
+    position: "relative",
+    minWidth: "2.25rem",
+    height: "2.25rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontFamily: "'JetBrains Mono', monospace",
+    fontWeight: 700,
+    fontSize: "0.95rem",
+    color: alpha(theme.palette.secondary.main, 0.6),
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: "0",
+      left: "50%",
+      width: "0",
+      height: "3px",
+      backgroundColor: theme.palette.secondary.main,
+      transform: "translateX(-50%)",
+      transition: "width 0.3s ease",
+      borderRadius: "2px 2px 0 0",
+    },
+    "&:hover": {
+      color: alpha(theme.palette.secondary.main, 0.8),
+      cursor: "pointer",
+    },
+    "&:hover::after": {
+      width: "60%",
+    },
+  },
+  pageButtonActive: {
+    color: theme.palette.secondary.main,
+    "&::after": {
+      width: "60%",
+    },
+    "&:hover": {
+      color: theme.palette.secondary.main,
+      cursor: "default",
+    },
+  },
+  pageButtonDisabled: {
+    opacity: 0.3,
+    pointerEvents: "none",
   },
   "@media (max-width: 1200px)": {
     grid: {
@@ -152,7 +209,9 @@ const Projects = withStyles((theme) => ({
     },
     grid: {
       gridTemplateColumns: "1fr",
-      height: "auto",
+    },
+    projectPlaceholder: {
+      aspectRatio: "16 / 9",
     },
     tag: {
       fontSize: "0.75rem",
@@ -163,6 +222,7 @@ const Projects = withStyles((theme) => ({
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState();
   const [selectedTags, setSelectedTags] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [showNotesCallout, setShowNotesCallout] = useState(
     () => !localStorage.getItem(NOTES_CALLOUT_KEY)
   );
@@ -176,6 +236,7 @@ const Projects = withStyles((theme) => ({
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
+    setCurrentPage(1);
   };
 
   const filteredProjects = useMemo(
@@ -188,8 +249,33 @@ const Projects = withStyles((theme) => ({
     [selectedTags]
   );
 
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE)
+  );
+
+  const paginatedProjects = useMemo(() => {
+    const start = (currentPage - 1) * PROJECTS_PER_PAGE;
+    const pageItems = filteredProjects.slice(start, start + PROJECTS_PER_PAGE);
+    const placeholderCount = PROJECTS_PER_PAGE - pageItems.length;
+    return [
+      ...pageItems,
+      ...Array.from({ length: placeholderCount }, (_, i) => ({
+        placeholder: true,
+        key: `placeholder-${i}`,
+      })),
+    ];
+  }, [filteredProjects, currentPage]);
+
   return (
-    <Wrapper id="projects">
+    <Wrapper
+      id="projects"
+      style={{
+        justifyContent: "flex-start",
+        paddingTop: "3.5rem",
+        paddingBottom: "2rem",
+      }}
+    >
       <div className={classes.container}>
         {showNotesCallout && (
           <div className={classes.notesCallout}>
@@ -223,7 +309,10 @@ const Projects = withStyles((theme) => ({
               classes.tag,
               selectedTags.length === 0 && classes.tagActive
             )}
-            onClick={() => setSelectedTags([])}
+            onClick={() => {
+              setSelectedTags([]);
+              setCurrentPage(1);
+            }}
           >
             All
           </button>
@@ -241,24 +330,72 @@ const Projects = withStyles((theme) => ({
           ))}
         </div>
         <div className={classes.grid}>
-          {filteredProjects.map((project, index) => (
-            <div
-              key={project.title}
-              className={classes.projectWrapper}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <ProjectBox
-                header={project.title}
-                imgSrc={project.imgSrc}
-                description={project.shortDescription}
-                onClick={() => {
-                  setShowModal(true);
-                  setModalContent(project);
-                }}
+          {paginatedProjects.map((project, index) =>
+            project.placeholder ? (
+              <div
+                key={project.key}
+                className={classes.projectPlaceholder}
+                aria-hidden="true"
               />
-            </div>
-          ))}
+            ) : (
+              <div
+                key={project.title}
+                className={classes.projectWrapper}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <ProjectBox
+                  header={project.title}
+                  imgSrc={project.imgSrc}
+                  description={project.shortDescription}
+                  onClick={() => {
+                    setShowModal(true);
+                    setModalContent(project);
+                  }}
+                />
+              </div>
+            )
+          )}
         </div>
+        {totalPages > 1 && (
+          <div className={classes.pagination}>
+            <button
+              className={clsx(
+                classes.pageButton,
+                currentPage === 1 && classes.pageButtonDisabled
+              )}
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              aria-label="Previous page"
+            >
+              ‹
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+              (page) => (
+                <button
+                  key={page}
+                  className={clsx(
+                    classes.pageButton,
+                    currentPage === page && classes.pageButtonActive
+                  )}
+                  onClick={() => setCurrentPage(page)}
+                >
+                  {page}
+                </button>
+              )
+            )}
+            <button
+              className={clsx(
+                classes.pageButton,
+                currentPage === totalPages && classes.pageButtonDisabled
+              )}
+              onClick={() =>
+                setCurrentPage((p) => Math.min(totalPages, p + 1))
+              }
+              aria-label="Next page"
+            >
+              ›
+            </button>
+          </div>
+        )}
       </div>
       {showModal ? (
         <ProjectModal setShowModal={setShowModal} project={modalContent} />

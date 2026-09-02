@@ -31,7 +31,7 @@ const Wrapper = withStyles(() => ({
       paddingBottom: "3rem",
     },
   },
-}))(({ classes, className, children, id }) => {
+}))(({ classes, className, children, id, style }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -69,6 +69,7 @@ const Wrapper = withStyles(() => ({
         className
       )}
       id={id}
+      style={style}
     >
       {children}
     </div>

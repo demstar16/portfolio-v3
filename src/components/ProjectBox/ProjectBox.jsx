@@ -5,7 +5,7 @@ const ProjectBox = withStyles((theme) => ({
   root: {
     position: "relative",
     width: "100%",
-    aspectRatio: "16 / 10",
+    aspectRatio: "16 / 8.55",
     borderRadius: "12px",
     border: `2px solid ${theme.palette.secondary.main}`,
     overflow: "hidden",
